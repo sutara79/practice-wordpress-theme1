@@ -5,6 +5,9 @@
   <small><?php wp_title(); ?></small>
 </h1>
 </header>
+<?php wp_nav_menu(array('menu'=>'profile')); ?>
+<?php wp_nav_menu(array('menu'=>'access')); ?>
+<?php wp_nav_menu(array('menu'=>'contact')); ?>
 <div id="main">
   <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
