@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<div id="container-wrapper">
-  <div id="container">
+<div class="container-wrapper">
+  <div class="container">
     <div id="main">
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
           <article>
-            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+            <h3 class="title-post"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
             <?php the_content(__('続きを読む')); ?>
           </article>
         <?php endwhile; ?>

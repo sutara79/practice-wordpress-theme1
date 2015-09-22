@@ -11,12 +11,13 @@
 </head>
 <body>
 <header>
-  <h1>
+  <h1 class="site-logo">
     <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
   </h1>
 </header>
-<nav id="globalnavi">
+<nav class="globalnavi">
   <?php wp_nav_menu(array(
+    'container' => false,
     'theme_location'=>'header-menu',
     'menu' => 'globalnavi',
     'depth' => 3,

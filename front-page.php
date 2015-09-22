@@ -1,13 +1,13 @@
 <?php get_header(); ?>
-<div id="container-wrapper">
-  <div id="container">
+<div class="container-wrapper">
+  <div class="container">
     <div id="main-home">
       <?php the_post(); ?>
       <article>
         <?php the_content(); ?>
       </article>
       <aside>
-        <h3><?php echo get_the_title(get_option('page_for_posts')); ?></h3>
+        <h3 class="title-news"><?php echo get_the_title(get_option('page_for_posts')); ?></h3>
         <?php $postslist = get_posts(array('posts_per_page' => 10)); ?>
         <?php if (count($postslist) > 0) : ?>
           <ul class="news-list">

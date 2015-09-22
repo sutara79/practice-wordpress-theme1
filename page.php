@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div id="container-wrapper">
-  <div id="container">
+<div class="container-wrapper">
+  <div class="container">
     <div id="main">
       <?php the_post(); ?>
       <article>
