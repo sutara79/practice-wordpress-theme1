@@ -21,8 +21,9 @@ function copyrightMenu() {
 }
 
 function registerCopyrightSettings() {
-  register_setting( 'copyright-settings-group', 'copyright-name' );
-  register_setting( 'copyright-settings-group', 'copyright-year' );
+  register_setting('copyright-settings-group', 'copyright-name');
+  register_setting('copyright-settings-group', 'copyright-year');
+  register_setting('copyright-settings-group', 'copyright-year-current');
 }
 
 function copyrightMenuPage() {
@@ -35,12 +36,20 @@ function copyrightMenuPage() {
         do_settings_sections( 'copyright-settings-group' );
       ?>
       <p>
-        <label for="copyright-name">著作権者</label>
+        <label for="copyright-name">著作権者 (英字)</label>
         <input type="text" id="copyright-name" class="regular-text" name="copyright-name" value="<?php echo get_option('copyright-name'); ?>">
       </p>
       <p>
-        <label for="copyright-year">最初の発行年</label>
+        <label for="copyright-year">初版の公開年</label>
         <input type="text" id="copyright-year" class="regular-text" name="copyright-year" value="<?php echo get_option('copyright-year'); ?>">
+      </p>
+      <p>
+        <label for="copyright-year-current">現在の年も表記する</label>
+        <input type="checkbox" id="copyright-year-current" name="copyright-year-current" value="true" <?php
+          if (get_option('copyright-year-current') === 'true') {
+            echo 'checked="checked"';
+          }
+        ?>>
       </p>
       <?php submit_button(); ?>
     </form>
