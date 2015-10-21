@@ -1,0 +1,62 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-10-21 14:52+0900\n"
+"PO-Revision-Date: 2015-10-21 13:45+0900\n"
+"Last-Translator: 宮崎 雄策 <toumin.m7@gmail.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:27
+msgid "コメントナビ"
+msgstr ""
+
+#: comments.php:30
+msgid "古いコメント"
+msgstr ""
+
+#: comments.php:34
+msgid "新しいコメント"
+msgstr ""
+
+#: comments.php:75
+msgid "コメントは受け付けていません。"
+msgstr ""
+
+#: front-page.php:22
+msgid "ニュースはありません。"
+msgstr ""
+
+#: index.php:9
+msgid "詳しく"
+msgstr ""
+
+#: index.php:13
+msgid "&laquo; 前へ"
+msgstr ""
+
+#: index.php:14
+msgid "次へ &raquo;"
+msgstr ""
+
+#: index.php:17
+msgid "記事はありません。"
+msgstr ""
+
+#: lib/custom-menu.php:8
+msgid "ヘッダーメニュー"
+msgstr ""
+
+#: lib/custom-menu.php:10
+msgid "フッターメニュー"
+msgstr ""

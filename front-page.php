@@ -19,7 +19,7 @@
             <?php endforeach; wp_reset_postdata(); ?>
           </ul>
         <?php else : ?>
-          <?php echo __('新着情報はありません'); ?>
+          <?php echo __('ニュースはありません。'); ?>
         <?php endif; ?>
       </aside>
     </div>

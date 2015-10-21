@@ -6,7 +6,7 @@
         <?php while (have_posts()) : the_post(); ?>
           <article>
             <h3 class="title-post"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-            <?php the_content(__('続きを読む')); ?>
+            <?php the_content(__('詳しく')); ?>
           </article>
         <?php endwhile; ?>
         <div class="navigation">
@@ -14,7 +14,7 @@
           <?php previous_posts_link(trim(__('次へ &raquo;', 'default'))) ?>
         </div>
       <?php else : ?>
-        記事はありません
+        <?php _e('記事はありません。') ?>
       <?php endif; ?>
     </div>
     <?php get_sidebar(); ?>

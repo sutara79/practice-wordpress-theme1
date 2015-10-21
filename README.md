@@ -1,6 +1,7 @@
 # practice-wordpress-theme1
 WordPressテーマの練習です。
 
+## ScreenShot
 ![練習用テーマのスクリーンショット](screenshot.png)
 
 ## Author
