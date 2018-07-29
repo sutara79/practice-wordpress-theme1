@@ -1,6 +1,7 @@
 <?php
 /**
- * ダッシュボードでの設定項目を追加
+ * ダッシュボードに設定項目を追加
+ * 著作権情報
  */
 add_action('admin_menu', 'copyrightMenu');
 

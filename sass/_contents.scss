@@ -4,10 +4,16 @@
 .container-wrapper {
   background: #fff;
   padding: 40px 0;
+
+  /**
+   * 最下部に張り付くフッタ
+   * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+   */
+  @include flex_grow(1);
 }
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: $width_pc;
 }
 
 /**
@@ -21,4 +27,35 @@ article {
 }
 article > p {
   margin-bottom: 1em;
+}
+
+/**
+ * ジャンボトロン
+ */
+
+.jumbotron {
+  height: 40vw;
+  background-color: gray;
+  background-position: center center;
+  background-size: cover;
+}
+
+.jumbotron-text-wrapper {
+  padding-top: 4vw;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+.jumbotron-main {
+  font-size: 2.5rem;
+}
+.jumbotron-sub {
+  font-size: 1rem;
+}
+.jumbotron-sub:before {
+  content: '';
+  display: block;
+  margin: 1rem 0;
+  width: 100px;
+  border-top: 1px solid #fff;
+  box-shadow: 0 0 2px #000;
 }

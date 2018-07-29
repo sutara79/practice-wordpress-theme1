@@ -1,19 +1,39 @@
 /**
  * グローバル
  */
+html {
+  height: 100%;
+}
+
 body {
+  background: #fff;
+  color: #222;
+
   /**
-   * For iOS
-   * See http://tech.nitoyon.com/ja/blog/2013/02/14/text-size-adjust/
+   * iOS対策
+   * http://tech.nitoyon.com/ja/blog/2013/02/14/text-size-adjust/
    */
   -webkit-text-size-adjust: 100%;
-  background: #ddd;
+
+  /**
+   * 最下部に張り付くフッタ
+   * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+   */
+  min-height: 100%;
+  @include display_flex();
+  @include flex_direction_column();
 }
+
 a {
-  transition: 0.3s;
+  color: #3a0;
+  text-decoration: none;
   -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
+     -moz-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /**
@@ -21,6 +41,6 @@ a {
  */
 .clearfix:after {
   clear: both;
-  content: "";
+  content: '';
   display: block;
 }
