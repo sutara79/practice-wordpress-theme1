@@ -1,0 +1,35 @@
+/**
+ * フッター
+ */
+footer {
+  background: #ddd;
+  border-top: 1px solid #aaa;
+  color: #333;
+  font-size: 0.9em;
+  padding: 20px;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-inner {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.footernavi > .menu {
+  display: table;
+  margin: 0 auto 1em;
+}
+.footernavi > .menu > li {
+  border-right: 1px solid #555;
+  display: table-cell;
+  padding: 2px 12px;
+}
+.footernavi > .menu > li:last-child {
+  border-right: none;
+}
+.footernavi > .menu > li > a {
+  color: #333;
+}
