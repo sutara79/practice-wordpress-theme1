@@ -11,16 +11,18 @@
 </head>
 <body>
 <header>
-  <h1 class="site-logo">
-    <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-  </h1>
+  <div class="container header-inner">
+    <h1 class="site-logo">
+      <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+    </h1>
+    <nav class="globalnavi">
+      <?php wp_nav_menu(array(
+        'container' => false,
+        'theme_location'=>'header-menu',
+        'menu' => 'globalnavi',
+        'depth' => 3,
+        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+      )); ?>
+    </nav>
+  </div>
 </header>
-<nav class="globalnavi">
-  <?php wp_nav_menu(array(
-    'container' => false,
-    'theme_location'=>'header-menu',
-    'menu' => 'globalnavi',
-    'depth' => 3,
-    'items_wrap' => '<ul id="%1$s" class="%2$s clearfix">%3$s</ul>'
-  )); ?>
-</nav>

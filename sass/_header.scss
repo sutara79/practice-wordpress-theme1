@@ -1,22 +1,32 @@
 /**
- * ヘッダー
+ * このファイルだけで使うミックスインと変数
  */
-header {
-  padding: 2.5rem 0;
+@mixin pc_header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
+  @include display_flex();
+  @include align_items_center();
+  height: 5.5rem;
+  box-sizing: border-box;
+}
 
-  .site-logo {
-    margin: 0 auto;
-    max-width: $width_pc;
-    font-size: 1.2rem;
-    font-weight: 700;
+$pc_width_submenu: 240px;
 
-    & > a {
-      color: #333;
-    }
+header a:hover {
+  text-decoration: none;
+}
 
-    & > a:hover {
-      text-shadow: 0 0 12px #ccc;
-    }
+.header-inner {
+  @include display_flex();
+  @include justify_content_space_between();
+}
+
+.site-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  & a {
+    @include pc_header_item();
+    padding-right: 1rem;
+    color: #333;
   }
 }
 
@@ -24,64 +34,76 @@ header {
  * グローバルナビ
  */
 .globalnavi {
-  background: #888;
   font-size: 0.9rem;
-}
-.globalnavi > .menu {
-  border-left: 1px solid #ccc;
-  margin: 0 auto;
-  max-width: $width_pc - 1;
-}
-.globalnavi > .menu > li {
-  border-right: 1px solid #ccc;
-  float: left;
-}
-.globalnavi > .menu > li > a {
-  background: #888;
-  color: #fff;
-  display: block;
-  padding: 12px 16px;
-}
-.globalnavi > .menu > li > a:hover {
-  background: #666;
-  text-shadow: 0 0 12px #ccc;
-}
-.globalnavi > .menu .current-menu-item > a {
-  background: #666;
-}
-.globalnavi > .menu li {
-  position: relative;
-}
-.globalnavi > .menu .sub-menu {
-  display: none;
-  position: absolute;
-  width: 180px;
-}
-.globalnavi > .menu .sub-menu .sub-menu {
-  left: calc(180px - 1px);
-  top: 0;
-}
-.globalnavi > .menu li:hover > .sub-menu {
-  display: block;
-}
-.globalnavi > .menu .sub-menu > li > a {
-  background: #eee;
-  border: 1px solid #ccc;
-  border-bottom: 0;
-  color: #333;
-  display: block;
-  font-size: 0.9em;
-  padding: 12px 16px;
-}
-.globalnavi > .menu .sub-menu > li:last-child > a {
-  border-bottom: 1px solid #ccc;
-}
-.globalnavi > .menu .sub-menu > li > a:hover {
-  background: #aaa;
-  color: #fff;
-  text-shadow: 0 0 12px #eee;
-}
 
-header a:hover, .globalnavi a:hover {
-  text-decoration: none;
+  & .menu {
+    @include display_flex();
+    @include justify_content_flex_end();
+
+    & li {
+      position: relative;
+    }
+
+    /**
+     * 先頭メニュー
+     */
+    & > li {
+      padding: 0 0.5rem;
+
+      & > a {
+        @include pc_header_item();
+        color: $color_normal;
+        padding: 0 0.5rem;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+      }
+      &:hover > a {
+          border-top: 2px solid $color_link;
+          color: $color_link;
+      }
+    }
+  }
+
+  /**
+   * サブメニュー共通
+   */
+  & .sub-menu {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background: #fff;
+    width: $pc_width_submenu;
+    right: 0;
+
+    & a {
+      display: block;
+      font-size: 0.85rem;
+      padding: 0.7rem 1rem;
+      color: $color_normal;
+
+      &:hover {
+        color: $color_link;
+      }
+
+      &:before {
+        content: ">";
+        padding-right: 0.4em;
+        display: inline-block;
+        color: #aaa;
+      }
+    }
+
+    /**
+     * 第2サブメニュー
+     */
+    & .sub-menu {
+      right: ($pc_width_submenu - 1);
+      top: 0;
+    }
+  }
+
+  & li:hover > .sub-menu { // 親メニューホバー時のサブメニュー
+    display: block;
+  }
 }

@@ -7,7 +7,7 @@ html {
 
 body {
   background: #fff;
-  color: #222;
+  color: $color_normal;
 
   /**
    * iOS対策
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: #3a0;
+  color: $color_link;
   text-decoration: none;
   -webkit-transition: 0.3s;
      -moz-transition: 0.3s;
@@ -36,11 +36,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/**
- * クリアフィックス
- */
-.clearfix:after {
-  clear: both;
-  content: '';
-  display: block;
+.container {
+  margin: 0 auto;
+  max-width: $width_pc;
 }
