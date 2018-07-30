@@ -33,17 +33,10 @@ header a:hover {
   }
 }
 
-.mobile-menu-btn-wrapper { // ハンバーガーメニューのボタンは非表示
-  display: none;
-}
-
-// .globalnavi-open {
-//   display: block !important;
-// }
-// .globalnavi-close {
-//   display: none !important;
-// }
-#menu-checkbox {
+#mobile-menu-checkbox,
+.mobile-menu-btn-wrapper,
+.mobile-globalnavi,
+.mobile-menu-cover {
   display: none;
 }
 

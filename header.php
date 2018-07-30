@@ -16,10 +16,19 @@
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </h1>
     <div class="mobile-menu-btn-wrapper">
-      <label for="menu-checkbox" class="mobile-menu-btn icon-menu"></label>
+      <label for="mobile-menu-checkbox" class="mobile-menu-btn icon-menu"></label>
     </div>
-    <input type="checkbox" id="menu-checkbox">
-    <label class="nav-unshown" id="nav-close" for="menu-checkbox"></label>
+    <input type="checkbox" id="mobile-menu-checkbox">
+    <label for="mobile-menu-checkbox" class="mobile-menu-cover"></label>
+    <nav class="mobile-globalnavi">
+      <?php wp_nav_menu(array(
+        'container' => false,
+        'theme_location'=>'header-menu',
+        'menu' => 'globalnavi',
+        'depth' => 3,
+        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+      )); ?>
+    </nav>
     <nav class="globalnavi">
       <?php wp_nav_menu(array(
         'container' => false,
