@@ -1,0 +1,43 @@
+/**
+ * このファイルだけで使うミックスインと変数
+ */
+$height: 4rem;
+
+/**
+ * ヘッダ (モバイル向け)
+ */
+@media screen and (max-width: $mobile_max) {
+  .header-inner {
+    display: block;
+    position: relative;
+  }
+
+  .site-logo {
+    font-size: 1rem;
+    & a {
+      height: $height;
+    }
+  }
+
+  .mobile-menu-btn-wrapper { // ハンバーガーメニューのボタンは非表示
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    & a {
+      @include header_item();
+      color: #666;
+      font-size: 1.5rem;
+      padding: 0.2rem 0.5rem;
+      height: $height;
+    }
+  }
+
+  /**
+   * グローバルナビ
+   */
+  .globalnavi {
+    display: none;
+  }
+}

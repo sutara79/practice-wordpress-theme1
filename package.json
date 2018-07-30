@@ -12,7 +12,7 @@
     "sass": "^1.10.1"
   },
   "scripts": {
-    "watch": "sass sass/style.scss:style.css --no-source-map --style compressed --watch",
-    "build": "sass sass/style.scss:style.css --no-source-map --style compressed"
+    "watch": "sass assets/sass/style.scss:style.css --no-source-map --style compressed --watch",
+    "build": "sass assets/sass/style.scss:style.css --no-source-map --style compressed"
   }
 }

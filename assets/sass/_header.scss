@@ -1,15 +1,18 @@
 /**
  * このファイルだけで使うミックスインと変数
  */
-@mixin pc_header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
+@mixin header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
   @include display_flex();
   @include align_items_center();
   height: 5.5rem;
   box-sizing: border-box;
 }
 
-$pc_width_submenu: 240px;
+$width_submenu: 240px;
 
+/**
+ * ヘッダ
+ */
 header a:hover {
   text-decoration: none;
 }
@@ -19,15 +22,19 @@ header a:hover {
   @include justify_content_space_between();
 }
 
-.site-logo {
+.site-logo { // サイトロゴ
   font-size: 1.2rem;
   font-weight: 700;
 
   & a {
-    @include pc_header_item();
+    @include header_item();
     padding-right: 1rem;
     color: #333;
   }
+}
+
+.mobile-menu-btn-wrapper { // ハンバーガーメニューのボタンは非表示
+  display: none;
 }
 
 /**
@@ -51,7 +58,7 @@ header a:hover {
       padding: 0 0.5rem;
 
       & > a {
-        @include pc_header_item();
+        @include header_item();
         color: $color_normal;
         padding: 0 0.5rem;
         border-top: 2px solid transparent;
@@ -65,7 +72,7 @@ header a:hover {
   }
 
   /**
-   * サブメニュー共通
+   * サブメニュー
    */
   & .sub-menu {
     display: none;
@@ -73,7 +80,7 @@ header a:hover {
     box-sizing: border-box;
     border: 1px solid #ddd;
     background: #fff;
-    width: $pc_width_submenu;
+    width: $width_submenu;
     right: 0;
 
     & a {
@@ -94,11 +101,8 @@ header a:hover {
       }
     }
 
-    /**
-     * 第2サブメニュー
-     */
-    & .sub-menu {
-      right: ($pc_width_submenu - 1);
+    & .sub-menu { // 第2サブメニュー
+      right: ($width_submenu - 1);
       top: 0;
     }
   }

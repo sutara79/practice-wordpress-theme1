@@ -15,6 +15,9 @@
     <h1 class="site-logo">
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </h1>
+    <div class="mobile-menu-btn-wrapper">
+      <a class="mobile-menu-btn icon-menu" href="javascript:void(0)"></a>
+    </div>
     <nav class="globalnavi">
       <?php wp_nav_menu(array(
         'container' => false,

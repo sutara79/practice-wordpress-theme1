@@ -11,10 +11,13 @@ Tags: practice
 Text Domain: mytheme
 */
 
-@import 'notofont';
-@import 'reset';
-@import 'var';
-@import 'basic';
-@import 'header';
-@import 'contents';
-@import 'footer';
+@import "reset";
+@import "icomoon";
+@import "var";
+@import "general";
+@import "header";
+@import "contents";
+@import "footer";
+
+@import "mobile/general";
+@import "mobile/header";
