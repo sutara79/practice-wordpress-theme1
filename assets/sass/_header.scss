@@ -37,12 +37,16 @@ header a:hover {
   display: none;
 }
 
-.globalnavi-open {
-  display: block !important;
+// .globalnavi-open {
+//   display: block !important;
+// }
+// .globalnavi-close {
+//   display: none !important;
+// }
+#menu-checkbox {
+  display: none;
 }
-.globalnavi-close {
-  display: none !important;
-}
+
 
 /**
  * グローバルナビ

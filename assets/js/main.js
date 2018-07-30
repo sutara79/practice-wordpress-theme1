@@ -1,13 +1,13 @@
 window.addEventListener("DOMContentLoaded", () => {
-  new MobileMenu({
-    btn:       ".mobile-menu-btn", // セレクタ
-    btnOpen:   "icon-cross", // クラス名
-    btnClose:  "icon-menu", // クラス名
-    menu:      ".globalnavi", // セレクタ
-    menuOpen:  "globalnavi-open", // クラス名
-    menuClose: "globalnavi-close", // クラス名
-    maxWidth:  1099
-  });
+  // new MobileMenu({
+  //   btn:       ".mobile-menu-btn", // セレクタ
+  //   btnOpen:   "icon-cross", // クラス名
+  //   btnClose:  "icon-menu", // クラス名
+  //   menu:      ".globalnavi", // セレクタ
+  //   menuOpen:  "globalnavi-open", // クラス名
+  //   menuClose: "globalnavi-close", // クラス名
+  //   maxWidth:  1099
+  // });
 });
 
 

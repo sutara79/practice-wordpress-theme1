@@ -16,8 +16,10 @@
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </h1>
     <div class="mobile-menu-btn-wrapper">
-      <a class="mobile-menu-btn icon-menu" href="javascript:void(0)"></a>
+      <label for="menu-checkbox" class="mobile-menu-btn icon-menu"></label>
     </div>
+    <input type="checkbox" id="menu-checkbox">
+    <label class="nav-unshown" id="nav-close" for="menu-checkbox"></label>
     <nav class="globalnavi">
       <?php wp_nav_menu(array(
         'container' => false,
