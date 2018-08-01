@@ -9,10 +9,13 @@
     "url": "https://github.com/sutara79/practice-wordpress-theme1.git"
   },
   "devDependencies": {
-    "sass": "^1.10.1"
+    "autoprefixer": "^9.0.2",
+    "node-sass": "^4.9.2",
+    "postcss-cli": "^6.0.0"
   },
   "scripts": {
-    "watch": "sass assets/sass/style.scss:style.css --no-source-map --style compressed --watch",
-    "build": "sass assets/sass/style.scss:style.css --no-source-map --style compressed"
+    "build": "node-sass assets/sass/index.scss --output-style compressed | postcss -o style.css --use autoprefixer --no-map",
+    "expand": "node-sass assets/sass/index.scss --output-style expanded | postcss -o style.css --use autoprefixer --no-map",
+    "watch": "node-sass assets/sass/index.scss style.css --output-style expanded -w"
   }
 }

@@ -21,6 +21,9 @@
     <input type="checkbox" id="mobile-menu-checkbox">
     <label for="mobile-menu-checkbox" class="mobile-menu-cover"></label>
     <nav class="mobile-globalnavi">
+      <div class="mobile-menu-close-wrapper">
+        <label for="mobile-menu-checkbox" class="mobile-menu-close icon-cross"></label>
+      </div>
       <?php wp_nav_menu(array(
         'container' => false,
         'theme_location'=>'header-menu',
