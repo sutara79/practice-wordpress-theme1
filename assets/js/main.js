@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   // new MobileMenu({
-  //   btn:       ".mobile-menu-btn", // セレクタ
+  //   btn:       ".mobile-gnav-btn", // セレクタ
   //   btnOpen:   "icon-cross", // クラス名
   //   btnClose:  "icon-menu", // クラス名
   //   menu:      ".globalnavi", // セレクタ

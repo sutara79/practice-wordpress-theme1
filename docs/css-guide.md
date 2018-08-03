@@ -13,6 +13,8 @@ header
     .header-logo (サイト名。企業ロゴ)
 
     ## グローバルナビ
+    .mobile-gnav-btn-wrapper
+      .mobile-gnav-btn
     .mobile-gnav
     .gnav
       .gnav-inner

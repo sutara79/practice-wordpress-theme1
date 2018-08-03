@@ -20,13 +20,13 @@ $height: 4rem;
     }
   }
 
-  .mobile-menu-btn-wrapper {
+  .mobile-gnav-btn-wrapper {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
 
-    & .mobile-menu-btn {
+    & .mobile-gnav-btn {
       @include header_item();
       color: #666;
       font-size: 1.5rem;
@@ -58,10 +58,10 @@ $height: 4rem;
     -webkit-transform: translateX(105%);
     transform: translateX(105%); // 右に隠しておく
 
-    & .mobile-menu-close-wrapper {
+    & .mobile-gnav-close-wrapper {
       text-align: right;
 
-      & .mobile-menu-close {
+      & .mobile-gnav-close {
         color: #666;
         font-size: 1.2rem;
         padding: 0.2rem;
@@ -77,7 +77,7 @@ $height: 4rem;
     }
   }
 
-  .mobile-menu-cover { // ページ全体を包む薄黒いカバー
+  .mobile-gnav-cover { // ページ全体を包む薄黒いカバー
     display: none;
     position: fixed;
     z-index: 99;
@@ -89,11 +89,11 @@ $height: 4rem;
     opacity: 0;
     transition: .3s ease-in-out;
   }
-  #mobile-menu-checkbox:checked ~ .mobile-menu-cover {
+  .mobile-gnav-checkbox:checked ~ .mobile-gnav-cover {
     display: block; // カバーを表示
     opacity: .5;
   }
-  #mobile-menu-checkbox:checked ~ .mobile-globalnavi {
+  .mobile-gnav-checkbox:checked ~ .mobile-globalnavi {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); // 左へ移動して画面に出現
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
