@@ -1,14 +1,16 @@
 /**
  * このファイルだけで使うミックスインと変数
  */
+$height_header: 5.5rem;
+$width_submenu: 240px;
+
 @mixin header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
   display: flex;
   align-items: center;
-  height: 5.5rem;
+  height: $height_header;
   box-sizing: border-box;
 }
 
-$width_submenu: 240px;
 
 /**
  * ヘッダ
@@ -20,6 +22,7 @@ header a:hover {
 .header-inner {
   display: flex;
   justify-content: space-between;
+  color: #fff;
 }
 
 .header-logo {
@@ -50,6 +53,7 @@ header a:hover {
   & .menu {
     display: flex;
     justify-content: flex-end;
+    z-index: 10;
 
     & li {
       position: relative;
@@ -79,13 +83,16 @@ header a:hover {
    * サブメニュー
    */
   & .sub-menu {
-    display: none;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
     position: absolute;
+    right: 0;
     box-sizing: border-box;
     border: 1px solid #ddd;
     background: #fff;
     width: $width_submenu;
-    right: 0;
 
     & a {
       display: block;
@@ -93,25 +100,31 @@ header a:hover {
       padding: 0.7rem 1rem;
       color: $color_normal;
 
-      &:hover {
-        color: $color_link;
-      }
-
       &:before {
-        content: ">";
-        padding-right: 0.4em;
+        content: '';
         display: inline-block;
-        color: #aaa;
+        width: 5px;
+        height: 5px;
+        margin: 0 0.5em 2px 0;
+        border-top: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        transform: rotate(45deg);
       }
     }
 
+    & li:hover > a {
+      color: $color_link;
+    }
+
     & .sub-menu { // 第2サブメニュー
-      right: ($width_submenu - 1);
       top: 0;
+      right: ($width_submenu - 1);
     }
   }
 
   & li:hover > .sub-menu { // 親メニューホバー時のサブメニュー
-    display: block;
+      // top: $height_header;
+      opacity: 1.0;
+      visibility: visible;
   }
 }

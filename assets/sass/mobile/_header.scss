@@ -55,7 +55,6 @@ $height: 4rem;
     height: 100%;
     background: #fff;
     transition: .3s ease-in-out;
-    -webkit-transform: translateX(105%);
     transform: translateX(105%); // 右に隠しておく
 
     & .mobile-gnav-close-wrapper {
@@ -94,7 +93,6 @@ $height: 4rem;
     opacity: .5;
   }
   .mobile-gnav-checkbox:checked ~ .mobile-globalnavi {
-    -webkit-transform: translateX(0%);
     transform: translateX(0%); // 左へ移動して画面に出現
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
   }

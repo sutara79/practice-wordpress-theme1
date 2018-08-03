@@ -27,10 +27,8 @@ body {
 a {
   color: $color_link;
   text-decoration: none;
-  -webkit-transition: color .3s, border .3s;
-     -moz-transition: color .3s, border .3s;
-       -o-transition: color .3s, border .3s;
-          transition: color .3s, border .3s;
+  transition: color .3s, border .3s;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: underline;

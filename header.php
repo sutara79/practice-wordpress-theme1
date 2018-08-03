@@ -26,20 +26,18 @@
       </div>
       <?php wp_nav_menu(array(
         'container' => false,
-        'theme_location'=>'header-menu',
         'menu' => 'globalnavi',
         'depth' => 3,
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
       )); ?>
     </nav>
     <nav class="globalnavi">
-      <?php wp_nav_menu(array(
+      <?php wp_nav_menu([
         'container' => false,
-        'theme_location'=>'header-menu',
         'menu' => 'globalnavi',
         'depth' => 3,
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-      )); ?>
+      ]); ?>
     </nav>
   </div>
 </header>
