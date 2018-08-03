@@ -2,8 +2,8 @@
  * このファイルだけで使うミックスインと変数
  */
 @mixin header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
-  @include display_flex();
-  @include align_items_center();
+  display: flex;
+  align-items: center;
   height: 5.5rem;
   box-sizing: border-box;
 }
@@ -18,8 +18,8 @@ header a:hover {
 }
 
 .header-inner {
-  @include display_flex();
-  @include justify_content_space_between();
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -48,8 +48,8 @@ header a:hover {
   font-size: 0.9rem;
 
   & .menu {
-    @include display_flex();
-    @include justify_content_flex_end();
+    display: flex;
+    justify-content: flex-end;
 
     & li {
       position: relative;

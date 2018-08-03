@@ -9,7 +9,7 @@
    * 最下部に張り付くフッタ
    * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
    */
-  @include flex_grow(1);
+  flex-grow: 1;
 }
 
 /**

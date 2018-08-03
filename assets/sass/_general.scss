@@ -20,8 +20,8 @@ body {
    * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
    */
   min-height: 100%;
-  @include display_flex();
-  @include flex_direction_column();
+  display: flex;
+  flex-direction: column;
 }
 
 a {
