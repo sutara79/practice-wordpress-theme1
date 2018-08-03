@@ -12,7 +12,7 @@
 <body>
 <header>
   <div class="container header-inner">
-    <h1 class="site-logo">
+    <h1 class="header-logo">
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </h1>
     <div class="mobile-menu-btn-wrapper">

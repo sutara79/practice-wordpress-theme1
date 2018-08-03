@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: My Theme
 Theme URI: https://github.com/sutara79/practice-wordpress-theme1
@@ -9,4 +10,484 @@ License: MIT License
 License URI: http://opensource.org/licenses/mit-license.php
 Tags: practice
 Text Domain: mytheme
-*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font-family:sans-serif;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}@font-face{font-family:'icomoon';src:url("assets/fonts/icomoon.eot?tc2mhi");src:url("assets/fonts/icomoon.eot?tc2mhi#iefix") format("embedded-opentype"),url("assets/fonts/icomoon.ttf?tc2mhi") format("truetype"),url("assets/fonts/icomoon.woff?tc2mhi") format("woff"),url("assets/fonts/icomoon.svg?tc2mhi#icomoon") format("svg");font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:'icomoon' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e9bd"}.icon-cross:before{content:"\ea0f"}.icon-arrow-up:before{content:"\ea32"}html{height:100%}body{background:#fff;color:#222;-webkit-text-size-adjust:100%;min-height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-direction:normal;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}a{color:#3a0;text-decoration:none;-webkit-transition:color .3s, border .3s;transition:color .3s, border .3s}a:hover{text-decoration:underline}.container{margin:0 auto;max-width:1000px}header a:hover{text-decoration:none}.header-inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.site-logo{font-size:1.2rem;font-weight:700}.site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:5.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;padding-right:1rem;color:#333}#mobile-menu-checkbox,.mobile-menu-btn-wrapper,.mobile-globalnavi,.mobile-menu-cover{display:none}.globalnavi{font-size:0.9rem}.globalnavi .menu{display:-webkit-box;display:-ms-flexbox;display:flex;webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end}.globalnavi .menu li{position:relative}.globalnavi .menu>li{padding:0 0.5rem}.globalnavi .menu>li>a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:5.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;color:#222;padding:0 0.5rem;border-top:2px solid transparent;border-bottom:2px solid transparent}.globalnavi .menu>li:hover>a{border-top:2px solid #3a0;color:#3a0}.globalnavi .sub-menu{display:none;position:absolute;-webkit-box-sizing:border-box;box-sizing:border-box;border:1px solid #ddd;background:#fff;width:240px;right:0}.globalnavi .sub-menu a{display:block;font-size:0.85rem;padding:0.7rem 1rem;color:#222}.globalnavi .sub-menu a:hover{color:#3a0}.globalnavi .sub-menu a:before{content:">";padding-right:0.4em;display:inline-block;color:#aaa}.globalnavi .sub-menu .sub-menu{right:239px;top:0}.globalnavi li:hover>.sub-menu{display:block}.container-wrapper{background:#fff;padding:40px 0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}article{margin-bottom:20px}.title-post{margin-bottom:10px}article>p{margin-bottom:1em}.jumbotron{height:40vw;background-color:gray;background-position:center center;background-size:cover}.jumbotron-text-wrapper{padding-top:4vw;color:#fff;text-shadow:0 0 2px #000}.jumbotron-main{font-size:2rem}.jumbotron-sub{font-size:1rem}.jumbotron-sub:before{content:'';display:block;margin:1rem 0;width:100px;border-top:1px solid #fff;-webkit-box-shadow:0 0 2px #000;box-shadow:0 0 2px #000}footer{background:#ddd;border-top:1px solid #aaa;color:#333;font-size:0.9em;padding:20px}.footer-inner{margin:0 auto;max-width:1000px}.footernavi>.menu{display:table;margin:0 auto 1em}.footernavi>.menu>li{border-right:1px solid #555;display:table-cell;padding:2px 12px}.footernavi>.menu>li:last-child{border-right:none}.footernavi>.menu>li>a{color:#333}@media screen and (max-width: 1099px){.container{margin:0 1rem}}@media screen and (max-width: 1099px){.header-inner{display:block;position:relative}.site-logo{display:inline-block;font-size:1rem}.site-logo a{height:4rem}.mobile-menu-btn-wrapper{display:block;position:absolute;right:0;top:0}.mobile-menu-btn-wrapper .mobile-menu-btn{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:5.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;color:#666;font-size:1.5rem;padding:0.2rem 0.5rem;height:4rem;cursor:pointer}.globalnavi{display:none}.mobile-globalnavi{display:block;overflow:auto;position:fixed;top:0;right:0;z-index:9999;width:90%;max-width:300px;-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;background:#fff;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;-webkit-transform:translateX(105%);transform:translateX(105%)}.mobile-globalnavi .mobile-menu-close-wrapper{text-align:right}.mobile-globalnavi .mobile-menu-close-wrapper .mobile-menu-close{color:#666;font-size:1.2rem;padding:0.2rem}.mobile-globalnavi a{color:#222}.mobile-globalnavi a:hover{color:#3a0}.mobile-menu-cover{display:none;position:fixed;z-index:99;top:0;left:0;width:100%;height:100%;background:black;opacity:0;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out}#mobile-menu-checkbox:checked ~ .mobile-menu-cover{display:block;opacity:.5}#mobile-menu-checkbox:checked ~ .mobile-globalnavi{-webkit-transform:translateX(0%);transform:translateX(0%);-webkit-box-shadow:6px 0 25px rgba(0,0,0,0.15);box-shadow:6px 0 25px rgba(0,0,0,0.15)}}
+*/
+/**
+ * 下記を一部改変
+ * 
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("assets/fonts/icomoon.eot?tc2mhi");
+  src: url("assets/fonts/icomoon.eot?tc2mhi#iefix") format("embedded-opentype"), url("assets/fonts/icomoon.ttf?tc2mhi") format("truetype"), url("assets/fonts/icomoon.woff?tc2mhi") format("woff"), url("assets/fonts/icomoon.svg?tc2mhi#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+.icon-cross:before {
+  content: "\ea0f";
+}
+
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+
+/**
+ * ブレークポイント
+ */
+/**
+ * 文字色
+ */
+/**
+ * flexbox
+ */
+/**
+ * グローバル
+ */
+html {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  /**
+   * iOS対策
+   * http://tech.nitoyon.com/ja/blog/2013/02/14/text-size-adjust/
+   */
+  -webkit-text-size-adjust: 100%;
+  /**
+   * 最下部に張り付くフッタ
+   * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+   */
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+a {
+  color: #3a0;
+  text-decoration: none;
+  -webkit-transition: color .3s, border .3s;
+  -moz-transition: color .3s, border .3s;
+  -o-transition: color .3s, border .3s;
+  transition: color .3s, border .3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/**
+ * このファイルだけで使うミックスインと変数
+ */
+/**
+ * ヘッダ
+ */
+header a:hover {
+  text-decoration: none;
+}
+
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.header-logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5.5rem;
+  box-sizing: border-box;
+  padding-right: 1rem;
+  color: #333;
+}
+
+#mobile-menu-checkbox,
+.mobile-menu-btn-wrapper,
+.mobile-globalnavi,
+.mobile-menu-cover {
+  display: none;
+}
+
+/**
+ * グローバルナビ
+ */
+.globalnavi {
+  font-size: 0.9rem;
+  /**
+   * サブメニュー
+   */
+}
+
+.globalnavi .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  /**
+     * 先頭メニュー
+     */
+}
+
+.globalnavi .menu li {
+  position: relative;
+}
+
+.globalnavi .menu > li {
+  padding: 0 0.5rem;
+}
+
+.globalnavi .menu > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5.5rem;
+  box-sizing: border-box;
+  color: #222;
+  padding: 0 0.5rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.globalnavi .menu > li:hover > a {
+  border-top: 2px solid #3a0;
+  color: #3a0;
+}
+
+.globalnavi .sub-menu {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 240px;
+  right: 0;
+}
+
+.globalnavi .sub-menu a {
+  display: block;
+  font-size: 0.85rem;
+  padding: 0.7rem 1rem;
+  color: #222;
+}
+
+.globalnavi .sub-menu a:hover {
+  color: #3a0;
+}
+
+.globalnavi .sub-menu a:before {
+  content: ">";
+  padding-right: 0.4em;
+  display: inline-block;
+  color: #aaa;
+}
+
+.globalnavi .sub-menu .sub-menu {
+  right: 239px;
+  top: 0;
+}
+
+.globalnavi li:hover > .sub-menu {
+  display: block;
+}
+
+/**
+ * コンテナ
+ */
+.container-wrapper {
+  background: #fff;
+  padding: 40px 0;
+  /**
+   * 最下部に張り付くフッタ
+   * https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+   */
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/**
+ * 投稿内容
+ */
+article {
+  margin-bottom: 20px;
+}
+
+.title-post {
+  margin-bottom: 10px;
+}
+
+article > p {
+  margin-bottom: 1em;
+}
+
+/**
+ * ジャンボトロン
+ */
+.jumbotron {
+  height: 40vw;
+  background-color: gray;
+  background-position: center center;
+  background-size: cover;
+}
+
+.jumbotron-text-wrapper {
+  padding-top: 4vw;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.jumbotron-main {
+  font-size: 2rem;
+}
+
+.jumbotron-sub {
+  font-size: 1rem;
+}
+
+.jumbotron-sub:before {
+  content: '';
+  display: block;
+  margin: 1rem 0;
+  width: 100px;
+  border-top: 1px solid #fff;
+  box-shadow: 0 0 2px #000;
+}
+
+/**
+ * フッター
+ */
+footer {
+  background: #ddd;
+  border-top: 1px solid #aaa;
+  color: #333;
+  font-size: 0.9em;
+  padding: 20px;
+}
+
+.footer-inner {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.footernavi > .menu {
+  display: table;
+  margin: 0 auto 1em;
+}
+
+.footernavi > .menu > li {
+  border-right: 1px solid #555;
+  display: table-cell;
+  padding: 2px 12px;
+}
+
+.footernavi > .menu > li:last-child {
+  border-right: none;
+}
+
+.footernavi > .menu > li > a {
+  color: #333;
+}
+
+@media screen and (max-width: 1099px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
+
+/**
+ * このファイルだけで使うミックスインと変数
+ */
+/**
+ * ヘッダ (モバイル向け)
+ */
+@media screen and (max-width: 1099px) {
+  .header-inner {
+    display: block;
+    position: relative;
+  }
+  .header-logo {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .header-logo a {
+    height: 4rem;
+  }
+  .mobile-menu-btn-wrapper {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .mobile-menu-btn-wrapper .mobile-menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 5.5rem;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.5rem;
+    height: 4rem;
+    cursor: pointer;
+  }
+  .globalnavi {
+    display: none;
+  }
+  /**
+   * モバイル向けグローバルナビ
+   */
+  .mobile-globalnavi {
+    display: block;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 90%;
+    max-width: 300px;
+    box-sizing: border-box;
+    height: 100%;
+    background: #fff;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(105%);
+    transform: translateX(105%);
+  }
+  .mobile-globalnavi .mobile-menu-close-wrapper {
+    text-align: right;
+  }
+  .mobile-globalnavi .mobile-menu-close-wrapper .mobile-menu-close {
+    color: #666;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+  .mobile-globalnavi a {
+    color: #222;
+  }
+  .mobile-globalnavi a:hover {
+    color: #3a0;
+  }
+  .mobile-menu-cover {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  #mobile-menu-checkbox:checked ~ .mobile-menu-cover {
+    display: block;
+    opacity: .5;
+  }
+  #mobile-menu-checkbox:checked ~ .mobile-globalnavi {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+}

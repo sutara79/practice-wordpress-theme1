@@ -4,8 +4,9 @@ WordPressテーマの練習です。
 ## ScreenShot
 ![練習用テーマのスクリーンショット](screenshot.png)
 
-## Author
-Yuusaku Miyazaki (宮崎 雄策) <toumin.m7@gmail.com>
-
 ## License
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
+
+## Author
+[Yuusaku Miyazaki](http://sutara79.hatenablog.com/entry/2015/10/14/143207)
+(<toumin.m7@gmail.com>)
