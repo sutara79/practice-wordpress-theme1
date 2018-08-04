@@ -10,34 +10,34 @@
 <?php wp_head(); ?>
 </head>
 <body>
-<header>
-  <div class="container header-inner">
-    <input type="checkbox" id="mobile-gnav-checkbox" class="mobile-gnav-checkbox">
-    <h1 class="header-logo">
-      <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-    </h1>
-    <div class="mobile-gnav-btn-wrapper">
-      <label for="mobile-gnav-checkbox" class="mobile-gnav-btn icon-menu"></label>
-    </div>
-    <label for="mobile-gnav-checkbox" class="mobile-gnav-cover"></label>
-    <nav class="mobile-globalnavi">
-      <div class="mobile-gnav-close-wrapper">
-        <label for="mobile-gnav-checkbox" class="mobile-gnav-close icon-cross"></label>
+<div class="header-wrapper">
+  <input type="checkbox" id="mobile-gnav-checkbox" class="mobile-gnav-checkbox">
+  <header>
+    <div class="container header-inner">
+      <h1 class="header-logo">
+        <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+      </h1>
+      <div class="mobile-gnav-btn-wrapper">
+        <label for="mobile-gnav-checkbox" class="mobile-gnav-btn icon-menu"></label>
       </div>
+      <nav class="globalnavi">
+        <?php wp_nav_menu([
+          'container' => false,
+          'menu' => 'globalnavi',
+          'depth' => 3,
+          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+        ]); ?>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-gnav">
+    <div class="container">
       <?php wp_nav_menu(array(
         'container' => false,
         'menu' => 'globalnavi',
         'depth' => 3,
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
       )); ?>
-    </nav>
-    <nav class="globalnavi">
-      <?php wp_nav_menu([
-        'container' => false,
-        'menu' => 'globalnavi',
-        'depth' => 3,
-        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-      ]); ?>
-    </nav>
-  </div>
-</header>
+    </div>
+  </nav>
+</div>
