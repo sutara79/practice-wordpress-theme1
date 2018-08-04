@@ -2,6 +2,7 @@
 // このファイルだけで使うミックスインと変数
 //
 $height: 4rem;
+$gnav_item_padding: 1em;
 
 //
 // ヘッダー (モバイル向け)
@@ -75,11 +76,11 @@ $height: 4rem;
     }
 
     & li {
-      margin-top: 0.8em;
+      margin-top: $gnav_item_padding;
     }
 
     & .menu > li {
-      padding-bottom: 0.8em;
+      padding-bottom: $gnav_item_padding;
       border-bottom: 1px dashed #ccc;
 
       &:last-child {

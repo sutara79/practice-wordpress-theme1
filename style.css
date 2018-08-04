@@ -140,6 +140,7 @@ a:hover {
 
 .container {
   margin: 0 auto;
+  padding: 0 24px;
   max-width: 1000px;
 }
 
@@ -368,13 +369,7 @@ footer {
   color: #333;
 }
 
-@media screen and (max-width: 1099px) {
-  .container {
-    margin: 0 1.5rem;
-  }
-}
-
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1047px) {
   .header__main {
     box-shadow: 0 0 2px #aaa;
   }
@@ -432,10 +427,10 @@ footer {
     color: #3a0;
   }
   .mobile-gnav li {
-    margin-top: 0.8em;
+    margin-top: 1em;
   }
   .mobile-gnav .menu > li {
-    padding-bottom: 0.8em;
+    padding-bottom: 1em;
     border-bottom: 1px dashed #ccc;
   }
   .mobile-gnav .menu > li:last-child {
@@ -446,7 +441,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1099px) and (max-width: 500px) {
+@media screen and (max-width: 1047px) and (max-width: 500px) {
   .mobile-gnav {
     column-count: 1;
   }
