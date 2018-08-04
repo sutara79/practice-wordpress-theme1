@@ -1,5 +1,9 @@
 # CSSのルール
 
+下記の記事を参考にしてルールを定めました。
+🔗 [こんなHTMLとCSSのコーディング規約で書きたい - Qiita](https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3)
+
+
 ## ページ構成
 
 ```
@@ -8,13 +12,13 @@
 
 
 ## ヘッダー
-header 
-  .header-inner
-    .header-logo (サイト名。企業ロゴ)
+.header 
+  .header__inner
+    .header__logo (サイト名。企業ロゴ)
 
     ## グローバルナビ
-    .mobile-gnav-btn-wrapper
-      .mobile-gnav-btn
+    .mobile-gnav__btn-wrapper
+      .mobile-gnav__btn
     .mobile-gnav
     .gnav
       .gnav-inner
@@ -27,25 +31,28 @@ header
 
 ## フッター
 .footer
-  .footer-inner
+  .footer__inner
 
 ```
 
 ## 命名規則
 - 英語。(不正確な和製英語でかまわない)
-- ブロック(ひとつにまとまった機能)内の部品のクラス名の先頭には、ブロックの名前をつける。
-- ブロックと部品の結合にはハイフンを用いる。スネークやキャメルは不可。
-    - OK: `.header-logo-inner`
-    - BAD: `.header_logo_inner`, `.headerLogoInner`
-
-### ブロックの命名規則
-|規則|説明|
-|:--|:--|
-|(ブロック)           |ハイフンなし。<br>OK: `.globalnavi`, `.gnav`<br>BAD: `.global-navi`, `.g-nav`|
-|(ブロック)-container |複数のブロックを包み込む要素|
-|(ブロック)-wrapper   |ひとつのブロックを包み込む要素<br>デザイン上必要な場合のみ定義する|
-|(ブロック)-inner     |ブロックの直下の要素。内部の複数の子要素を包み込むためのもの<br>デザイン上必要な場合のみ定義する|
-|pc-(ブロック)<br>mobile-(ブロック)|レスポンシブデザインでの各ビュー専用のブロックに対しては、接頭辞をつける|
+- [BEM](http://getbem.com/)に則って命名する。
 
 - - - - - - - - - - - - - - - - - - -
 ## セレクタの規則
+
+
+- - - - - - - - - - - - - - - - - - -
+## コメントの規則
+```scss
+//
+// 複数の行やブロックにまたがるまとまりに対する説明
+//
+
+
+// 直下の行やブロックのみに対する説明
+```
+
+※複数行のコメント(`/*  */`)は用いない。  
+理由は、まとめてコメントアウトする際に邪魔になるからである。

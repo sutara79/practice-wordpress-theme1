@@ -10,17 +10,17 @@
 <?php wp_head(); ?>
 </head>
 <body>
-<div class="header-wrapper">
-  <input type="checkbox" id="mobile-gnav-checkbox" class="mobile-gnav-checkbox">
-  <header>
-    <div class="container header-inner">
-      <h1 class="header-logo">
+<header class="header">
+  <input type="checkbox" id="mobile-gnav__checkbox" class="mobile-gnav__checkbox">
+  <div class="header__main">
+    <div class="container header__inner">
+      <h1 class="header__logo">
         <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
       </h1>
-      <div class="mobile-gnav-btn-wrapper">
-        <label for="mobile-gnav-checkbox" class="mobile-gnav-btn icon-menu"></label>
+      <div class="mobile-gnav__btn-wrapper">
+        <label for="mobile-gnav__checkbox" class="mobile-gnav__btn icon-menu"></label>
       </div>
-      <nav class="globalnavi">
+      <nav class="pc-gnav">
         <?php wp_nav_menu([
           'container' => false,
           'menu' => 'globalnavi',
@@ -29,7 +29,7 @@
         ]); ?>
       </nav>
     </div>
-  </header>
+  </div>
   <nav class="mobile-gnav">
     <div class="container">
       <?php wp_nav_menu(array(
@@ -40,4 +40,4 @@
       )); ?>
     </div>
   </nav>
-</div>
+</header>

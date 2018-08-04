@@ -104,12 +104,6 @@ table {
 }
 
 /**
- * ブレークポイント
- */
-/**
- * 文字色
- */
-/**
  * グローバル
  */
 html {
@@ -149,33 +143,27 @@ a:hover {
   max-width: 1000px;
 }
 
-/**
- * このファイルだけで使うミックスインと変数
- */
-/**
- * ヘッダ
- */
-.header-wrapper a:hover {
+.header a:hover {
   text-decoration: none;
 }
 
-header {
+.header__main {
   background: #fff;
   position: relative;
   z-index: 10;
 }
 
-.header-inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
+.header__logo {
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-.header-logo a {
+.header__logo a {
   display: flex;
   align-items: center;
   height: 5.5rem;
@@ -184,8 +172,8 @@ header {
   color: #333;
 }
 
-#mobile-gnav-checkbox,
-.mobile-gnav-btn-wrapper,
+#mobile-gnav__checkbox,
+.mobile-gnav__btn-wrapper,
 .mobile-gnav-cover {
   display: none;
 }
@@ -193,7 +181,7 @@ header {
 .mobile-gnav {
   display: none;
   position: absolute;
-  background: #ddd;
+  background: #eee;
   z-index: 1;
   transform: translateY(-105%);
   width: 100%;
@@ -201,39 +189,29 @@ header {
   box-shadow: 0 0 1px #888;
 }
 
-.mobile-gnav-btn:before {
+.mobile-gnav__btn:before {
   content: "\e9bd";
-  /* .icon-menu from IcoMoon */
 }
 
-/**
- * グローバルナビ
- */
-.globalnavi {
+.pc-gnav {
   font-size: 0.9rem;
-  /**
-   * サブメニュー
-   */
 }
 
-.globalnavi .menu {
+.pc-gnav .menu {
   display: flex;
   justify-content: flex-end;
   z-index: 10;
-  /**
-     * 先頭メニュー
-     */
 }
 
-.globalnavi .menu li {
+.pc-gnav .menu li {
   position: relative;
 }
 
-.globalnavi .menu > li {
-  padding: 0 0.5rem;
+.pc-gnav .menu > li {
+  margin: 0 0.5rem;
 }
 
-.globalnavi .menu > li > a {
+.pc-gnav .menu > li > a {
   display: flex;
   align-items: center;
   height: 5.5rem;
@@ -244,12 +222,12 @@ header {
   border-bottom: 2px solid transparent;
 }
 
-.globalnavi .menu > li:hover > a {
+.pc-gnav .menu > li:hover > a {
   border-top: 2px solid #3a0;
   color: #3a0;
 }
 
-.globalnavi .sub-menu {
+.pc-gnav .sub-menu {
   transition: all .3s;
   visibility: hidden;
   opacity: 0;
@@ -258,18 +236,18 @@ header {
   right: 0;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  background: #fff;
+  background: #eee;
   width: 240px;
 }
 
-.globalnavi .sub-menu a {
+.pc-gnav .sub-menu a {
   display: block;
   font-size: 0.85rem;
   padding: 0.7rem 1rem;
   color: #222;
 }
 
-.globalnavi .sub-menu a:before {
+.pc-gnav .sub-menu a:before {
   content: '';
   display: inline-block;
   width: 5px;
@@ -280,16 +258,16 @@ header {
   transform: rotate(45deg);
 }
 
-.globalnavi .sub-menu li:hover > a {
+.pc-gnav .sub-menu li:hover > a {
   color: #3a0;
 }
 
-.globalnavi .sub-menu .sub-menu {
+.pc-gnav .sub-menu .sub-menu {
   top: 0;
   right: 239px;
 }
 
-.globalnavi li:hover > .sub-menu {
+.pc-gnav li:hover > .sub-menu {
   opacity: 1.0;
   visibility: visible;
 }
@@ -392,62 +370,60 @@ footer {
 
 @media screen and (max-width: 1099px) {
   .container {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
 }
 
-/**
- * このファイルだけで使うミックスインと変数
- */
-/**
- * ヘッダ (モバイル向け)
- */
 @media screen and (max-width: 1099px) {
-  .header-inner {
+  .header__main {
+    box-shadow: 0 0 2px #aaa;
+  }
+  .header__inner {
     display: block;
     position: relative;
     z-index: 9999;
   }
-  .header-logo {
+  .header__logo {
     display: inline-block;
     font-size: 1rem;
   }
-  .header-logo a {
+  .header__logo a {
     height: 4rem;
   }
-  .mobile-gnav-btn-wrapper {
+  .mobile-gnav__btn-wrapper {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
-  .mobile-gnav-btn-wrapper .mobile-gnav-btn {
+  .mobile-gnav__btn {
     display: flex;
     align-items: center;
     height: 5.5rem;
     box-sizing: border-box;
     color: #666;
     font-size: 1.5rem;
-    padding: 0.2rem 0.5rem;
     height: 4rem;
     cursor: pointer;
   }
-  .globalnavi {
+  .pc-gnav {
     display: none;
   }
-  /**
-   * モバイル向けグローバルナビ
-   */
+  .mobile-gnav__checkbox:checked ~ .mobile-gnav {
+    transform: translateY(0);
+  }
+  .mobile-gnav__checkbox:checked ~ .header__main .mobile-gnav__btn:before {
+    content: "\ea0f";
+    font-size: 1.4rem;
+  }
   .mobile-gnav {
     display: block;
-  }
-  .mobile-gnav .mobile-gnav-close-wrapper {
-    text-align: right;
-  }
-  .mobile-gnav .mobile-gnav-close-wrapper .mobile-gnav-close {
-    color: #666;
-    font-size: 1.2rem;
-    padding: 0.2rem;
+    padding: 1rem 0;
+    columns: 2 auto;
+    column-gap: 1em;
+    column-rule: solid #ccc 1px;
+    font-size: 0.95em;
+    box-shadow: 0 0 2px #aaa;
   }
   .mobile-gnav a {
     color: #222;
@@ -455,12 +431,23 @@ footer {
   .mobile-gnav a:hover {
     color: #3a0;
   }
-  .mobile-gnav-checkbox:checked ~ .mobile-gnav {
-    transform: translateY(0);
+  .mobile-gnav li {
+    margin-top: 0.8em;
   }
-  .mobile-gnav-checkbox:checked ~ header .mobile-gnav-btn:before {
-    content: "\ea0f";
-    /* .icon-cross from IcoMoon */
-    font-size: 1.4rem;
+  .mobile-gnav .menu > li {
+    padding-bottom: 0.8em;
+    border-bottom: 1px dashed #ccc;
+  }
+  .mobile-gnav .menu > li:last-child {
+    border-bottom: 0;
+  }
+  .mobile-gnav .sub-menu {
+    padding-left: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1099px) and (max-width: 500px) {
+  .mobile-gnav {
+    column-count: 1;
   }
 }

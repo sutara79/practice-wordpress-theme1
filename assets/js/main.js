@@ -1,11 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
   // new MobileMenu({
-  //   btn:       ".mobile-gnav-btn", // セレクタ
+  //   btn:       ".mobile-gnav__btn", // セレクタ
   //   btnOpen:   "icon-cross", // クラス名
   //   btnClose:  "icon-menu", // クラス名
-  //   menu:      ".globalnavi", // セレクタ
-  //   menuOpen:  "globalnavi-open", // クラス名
-  //   menuClose: "globalnavi-close", // クラス名
+  //   menu:      ".pc-gnav", // セレクタ
+  //   menuOpen:  "pc-gnav-open", // クラス名
+  //   menuClose: "pc-gnav-close", // クラス名
   //   maxWidth:  1099
   // });
 });

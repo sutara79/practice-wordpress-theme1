@@ -1,6 +1,6 @@
-/**
- * このファイルだけで使うミックスインと変数
- */
+//
+// このファイルだけで使うミックスインと変数
+//
 $height_header: 5.5rem;
 $width_submenu: 240px;
 
@@ -11,26 +11,25 @@ $width_submenu: 240px;
   box-sizing: border-box;
 }
 
-
-/**
- * ヘッダ
- */
-.header-wrapper a:hover {
+//
+// ヘッダ
+//
+.header a:hover {
   text-decoration: none;
 }
 
-header {
+.header__main {
   background: #fff;
   position: relative;
   z-index: 10;
 }
 
-.header-inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
+.header__logo {
   font-size: 1.2rem;
   font-weight: 700;
 
@@ -41,8 +40,8 @@ header {
   }
 }
 
-#mobile-gnav-checkbox,
-.mobile-gnav-btn-wrapper,
+#mobile-gnav__checkbox,
+.mobile-gnav__btn-wrapper,
 .mobile-gnav-cover {
   display: none;
 }
@@ -50,7 +49,7 @@ header {
 .mobile-gnav {
   display: none;
   position: absolute;
-  background: #ddd;
+  background: #eee;
   z-index: 1;
   transform: translateY(-105%);
   width: 100%;
@@ -58,14 +57,14 @@ header {
   box-shadow: 0 0 1px #888;
 }
 
-.mobile-gnav-btn:before {
-  content: "\e9bd"; /* .icon-menu from IcoMoon */
+.mobile-gnav__btn:before {
+  content: "\e9bd"; // .icon-menu (IcoMoon)
 }
 
-/**
- * グローバルナビ
- */
-.globalnavi {
+//
+// グローバルナビ
+//
+.pc-gnav {
   font-size: 0.9rem;
 
   & .menu {
@@ -77,11 +76,11 @@ header {
       position: relative;
     }
 
-    /**
-     * 先頭メニュー
-     */
+    //
+    // 先頭メニュー
+    //
     & > li {
-      padding: 0 0.5rem;
+      margin: 0 0.5rem;
 
       & > a {
         @include header_item();
@@ -97,9 +96,9 @@ header {
     }
   }
 
-  /**
-   * サブメニュー
-   */
+  //
+  // サブメニュー
+  //
   & .sub-menu {
     transition: all .3s;
     visibility: hidden;
@@ -109,7 +108,7 @@ header {
     right: 0;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    background: #fff;
+    background: #eee;
     width: $width_submenu;
 
     & a {
@@ -141,7 +140,6 @@ header {
   }
 
   & li:hover > .sub-menu { // 親メニューホバー時のサブメニュー
-      // top: $height_header;
       opacity: 1.0;
       visibility: visible;
   }

@@ -1,19 +1,22 @@
-/**
- * このファイルだけで使うミックスインと変数
- */
+//
+// このファイルだけで使うミックスインと変数
+//
 $height: 4rem;
 
-/**
- * ヘッダ (モバイル向け)
- */
+//
+// ヘッダー (モバイル向け)
+//
 @media screen and (max-width: $mobile_max) {
-  .header-inner {
+  .header__main {
+    box-shadow: 0 0 2px #aaa;
+  }
+  .header__inner {
     display: block;
     position: relative;
     z-index: 9999;
   }
 
-  .header-logo {
+  .header__logo {
     display: inline-block;
     font-size: 1rem;
     & a {
@@ -21,40 +24,47 @@ $height: 4rem;
     }
   }
 
-  .mobile-gnav-btn-wrapper {
+  .mobile-gnav__btn-wrapper {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-
-    & .mobile-gnav-btn {
-      @include header_item();
-      color: #666;
-      font-size: 1.5rem;
-      padding: 0.2rem 0.5rem;
-      height: $height;
-      cursor: pointer;
-    }
   }
 
-  .globalnavi { // PC向けグローバルナビは非表示に
+  .mobile-gnav__btn {
+    @include header_item();
+    color: #666;
+    font-size: 1.5rem;
+    height: $height;
+    cursor: pointer;
+  }
+
+  // PC向けグローバルナビは非表示に
+  .pc-gnav {
     display: none;
   }
-  /**
-   * モバイル向けグローバルナビ
-   */
+
+  // メニューをスライドダウンさせる
+  .mobile-gnav__checkbox:checked ~ .mobile-gnav {
+    transform: translateY(0);
+  }
+
+  .mobile-gnav__checkbox:checked ~ .header__main .mobile-gnav__btn:before {
+    content: "\ea0f"; // .icon-cross (IcoMoon)
+    font-size: 1.4rem;
+  }
+
+  //
+  // モバイル向けグローバルナビ
+  //
   .mobile-gnav {
     display: block;
-
-    & .mobile-gnav-close-wrapper {
-      text-align: right;
-
-      & .mobile-gnav-close {
-        color: #666;
-        font-size: 1.2rem;
-        padding: 0.2rem;
-      }
-    }
+    padding: 1rem 0;
+    columns: 2 auto;
+    column-gap: 1em;
+    column-rule: solid #ccc 1px;
+    font-size: 0.95em;
+    box-shadow: 0 0 2px #aaa;
 
     & a {
       color: $color_normal;
@@ -63,14 +73,30 @@ $height: 4rem;
         color: $color_link;
       }
     }
+
+    & li {
+      margin-top: 0.8em;
+    }
+
+    & .menu > li {
+      padding-bottom: 0.8em;
+      border-bottom: 1px dashed #ccc;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    & .sub-menu {
+      padding-left: 0.8em;
+    }
   }
 
-  .mobile-gnav-checkbox:checked ~ .mobile-gnav {
-    transform: translateY(0);
-  }
-
-  .mobile-gnav-checkbox:checked ~ header .mobile-gnav-btn:before {
-    content: "\ea0f"; /* .icon-cross from IcoMoon */
-    font-size: 1.4rem;
+  // スマートフォンなどの画面幅の狭いモバイルでは、
+  // グローバルメニューは1列で表示する
+  @media screen and (max-width: 500px) {
+    .mobile-gnav {
+      column-count: 1;
+    }
   }
 }
