@@ -13,20 +13,24 @@
 
 ## ヘッダー
 .header 
-  .header__inner
-    .header__logo (サイト名。企業ロゴ)
+  .header__main
+    .container
+      .header__inner
+        .header__logo
+        .pc-gnav ## PC用グローバルナビ
+          .menu (WordPressが生成する)
+            li
+            .sub-menu
+              li
+  .mobile-gnav ## モバイル用グローバルナビ
+    .container
+      .menu
+        li
+        .sub-menu
+          li
 
-    ## グローバルナビ
-    .mobile-gnav__btn-wrapper
-      .mobile-gnav__btn
-    .mobile-gnav
-    .gnav
-      .gnav-inner
-        .gnav-item
-          .gnav-item-link
-          .gnav-child-list
-            .gnav-child-item
-              .gnav-child-item-link
+
+## 
 
 
 ## フッター

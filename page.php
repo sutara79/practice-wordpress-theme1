@@ -1,13 +1,15 @@
 <?php get_header(); ?>
-<div class="container-wrapper">
-  <div class="container">
-    <div id="main">
-      <?php the_post(); ?>
-      <article>
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
-      </article>
+<article class="article">
+    <div class="article__title__wrapper">
+        <div class="container">
+            <h1 class="article__title"><?php the_title(); ?></h1>
+        </div>
     </div>
-  </div>
-</div>
+    <div class="article__contents__wrapper">
+        <div class="container">
+            <?php the_post(); ?>
+            <?php the_content(); ?>
+        </div>
+    </div>
+</article>
 <?php get_footer(); ?>

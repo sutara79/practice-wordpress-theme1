@@ -6,7 +6,20 @@ $container_padding: 24px;
 $mobile_max: 1047px;
 
 //
-// 文字色
+// 色
 //
-$color_normal: #222;
-$color_link: #3a0;
+
+// 文字色
+$color_txt_normal: #222;
+$color_txt_link: #3a0;
+$color_txt_rev: #fff;
+$color_txt_rev_link: #cf8;
+
+// 背景色
+$color_bg_main: #fff;
+$color_bg_sub: #eee;
+$color_bg_rev: #888;
+$color_bg_rev_sub: #666;
+
+// グラデーション
+$img_bg_title: linear-gradient(115deg, #3a0 0%, #7d4 100%);

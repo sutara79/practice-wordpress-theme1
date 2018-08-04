@@ -68,10 +68,10 @@ $gnav_item_padding: 1em;
     box-shadow: 0 0 2px #aaa;
 
     & a {
-      color: $color_normal;
+      color: $color_txt_normal;
 
       &:hover {
-        color: $color_link;
+        color: $color_txt_link;
       }
     }
 

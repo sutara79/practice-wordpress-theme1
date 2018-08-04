@@ -15,13 +15,14 @@
   <div class="header__main">
     <div class="container">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <h2 class="header__logo">
           <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-        </h1>
+        </h2>
         <div class="mobile-gnav__btn-wrapper">
           <label for="mobile-gnav__checkbox" class="mobile-gnav__btn icon-menu"></label>
         </div>
         <nav class="pc-gnav">
+          <h4 class="pc-gnav__header always-hidden">PC向けグローバルメニュー</h4>
           <?php wp_nav_menu([
             'container' => false,
             'menu' => 'globalnavi',
@@ -33,6 +34,7 @@
     </div>
   </div>
   <nav class="mobile-gnav">
+    <h4 class="mobile-gnav__header always-hidden">モバイル向けグローバルメニュー</h4>
     <div class="container">
       <?php wp_nav_menu(array(
         'container' => false,
@@ -43,3 +45,8 @@
     </div>
   </nav>
 </header>
+<?php
+// 最下部に張り付くフッター
+// https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+?>
+<div class="sticky-footer">

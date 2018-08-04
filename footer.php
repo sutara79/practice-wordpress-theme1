@@ -21,6 +21,12 @@ function getCopyrightYear() {
   return $first;
 }
 ?>
+
+<?php
+// 最下部に張り付くフッター
+// https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+?>
+</div>
 <footer>
   <div class="footer-inner">
     <nav class="footernavi">
