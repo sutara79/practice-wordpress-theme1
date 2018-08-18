@@ -1,0 +1,85 @@
+// お問い合わせ
+
+.wpcf7 {
+  max-width: 600px;
+  font-size: 0.9rem;
+
+  & p {
+    margin: 1rem 0;
+  }
+}
+
+// 「必須」のラベル
+.field-required {
+  font-size: 0.8em;
+  padding: 0.4em;
+  display: inline-block;
+  color: #fff;
+  background: #c33;
+  border-radius: 3px;
+  margin-left: 1em;
+}
+
+.wpcf7-text {
+  border: 1px solid $color_border_input;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 15px;
+}
+
+.wpcf7-textarea {
+  border: 1px solid $color_border_input;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 15px;
+}
+
+.wpcf7-submit {
+  font-size: 14px;
+  outline: none;
+  letter-spacing: 0.4em;
+  padding: 0.7em 1.2em 0.7em 1.6em;
+  background-image: linear-gradient(#fff, #eee);
+  border: 1px solid #bbb;
+  border-bottom-width: 3px;
+  box-sizing: content-box;
+  display: inline-block;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+
+  &:hover {
+    border-color: #aaa;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// 不正な入力項目を強調する
+.wpcf7-not-valid {
+  border: 2px solid #e77;
+}
+
+//
+// Contact Form 7 のスタイル指定を上書きする
+// 
+span.wpcf7-not-valid-tip {
+  color: #d33 !important;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-spam-blocked {
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: #fdd !important;
+}
+
+div.wpcf7-response-output {
+  margin: 2em 0 1em !important;
+  padding: 1em !important;
+}

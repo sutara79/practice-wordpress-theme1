@@ -112,7 +112,7 @@ html {
 
 body {
   background: #fff;
-  color: #222;
+  color: #555;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
   display: flex;
@@ -217,7 +217,7 @@ a:hover {
   align-items: center;
   height: 5.5rem;
   box-sizing: border-box;
-  color: #222;
+  color: #555;
   padding: 0 0.5rem;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
@@ -245,7 +245,7 @@ a:hover {
   display: block;
   font-size: 0.85rem;
   padding: 0.7rem 1rem;
-  color: #222;
+  color: #555;
 }
 
 .pc-gnav .sub-menu a:before {
@@ -369,6 +369,85 @@ footer {
   color: #333;
 }
 
+.wpcf7 {
+  max-width: 600px;
+  font-size: 0.9rem;
+}
+
+.wpcf7 p {
+  margin: 1rem 0;
+}
+
+.field-required {
+  font-size: 0.8em;
+  padding: 0.4em;
+  display: inline-block;
+  color: #fff;
+  background: #c33;
+  border-radius: 3px;
+  margin-left: 1em;
+}
+
+.wpcf7-text {
+  border: 1px solid #bbb;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 15px;
+}
+
+.wpcf7-textarea {
+  border: 1px solid #bbb;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 15px;
+}
+
+.wpcf7-submit {
+  font-size: 14px;
+  outline: none;
+  letter-spacing: 0.4em;
+  padding: 0.7em 1.2em 0.7em 1.6em;
+  background-image: linear-gradient(#fff, #eee);
+  border: 1px solid #bbb;
+  border-bottom-width: 3px;
+  box-sizing: content-box;
+  display: inline-block;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.wpcf7-submit:hover {
+  border-color: #aaa;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.wpcf7-not-valid {
+  border: 2px solid #e77;
+}
+
+span.wpcf7-not-valid-tip {
+  color: #d33 !important;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-spam-blocked {
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: #fdd !important;
+}
+
+div.wpcf7-response-output {
+  margin: 2em 0 1em !important;
+  padding: 1em !important;
+}
+
 @media screen and (max-width: 1047px) {
   .header__main {
     box-shadow: 0 0 2px #aaa;
@@ -421,7 +500,7 @@ footer {
     box-shadow: 0 0 2px #aaa;
   }
   .mobile-gnav a {
-    color: #222;
+    color: #555;
   }
   .mobile-gnav a:hover {
     color: #3a0;
