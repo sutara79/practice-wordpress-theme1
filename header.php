@@ -1,3 +1,11 @@
+<?php
+/**
+ * ヘッダー
+ * @package WordPress
+ * @subpackage My_Theme
+ * @since My Theme 1.0
+ */
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,39 +19,39 @@
 </head>
 <body>
 <header class="header">
-  <input type="checkbox" id="mobile-gnav__checkbox" class="mobile-gnav__checkbox">
-  <div class="header__main">
-    <div class="container">
-      <div class="header__inner">
-        <h2 class="header__logo">
-          <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-        </h2>
-        <div class="mobile-gnav__btn-wrapper">
-          <label for="mobile-gnav__checkbox" class="mobile-gnav__btn icon-menu"></label>
+    <input type="checkbox" id="mobile-gnav__checkbox" class="mobile-gnav__checkbox">
+    <div class="header__main">
+        <div class="container">
+            <div class="header__inner">
+                <h2 class="header__logo">
+                    <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+                </h2>
+                <div class="mobile-gnav__btn-wrapper">
+                    <label for="mobile-gnav__checkbox" class="mobile-gnav__btn icon-menu"></label>
+                </div>
+                <nav class="pc-gnav">
+                    <h4 class="pc-gnav__header always-hidden">PC向けグローバルメニュー</h4>
+                    <?php wp_nav_menu([
+                        'container' => false,
+                        'menu' => 'globalnavi',
+                        'depth' => 3,
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+                    ]); ?>
+                </nav>
+            </div>
         </div>
-        <nav class="pc-gnav">
-          <h4 class="pc-gnav__header always-hidden">PC向けグローバルメニュー</h4>
-          <?php wp_nav_menu([
-            'container' => false,
-            'menu' => 'globalnavi',
-            'depth' => 3,
-            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-          ]); ?>
-        </nav>
-      </div>
     </div>
-  </div>
-  <nav class="mobile-gnav">
-    <h4 class="mobile-gnav__header always-hidden">モバイル向けグローバルメニュー</h4>
-    <div class="container">
-      <?php wp_nav_menu(array(
-        'container' => false,
-        'menu' => 'globalnavi',
-        'depth' => 3,
-        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-      )); ?>
-    </div>
-  </nav>
+    <nav class="mobile-gnav">
+        <h4 class="mobile-gnav__header always-hidden">モバイル向けグローバルメニュー</h4>
+        <div class="container">
+            <?php wp_nav_menu(array(
+                'container' => false,
+                'menu' => 'globalnavi',
+                'depth' => 3,
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+            )); ?>
+        </div>
+    </nav>
 </header>
 <?php
 // 最下部に張り付くフッター

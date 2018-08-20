@@ -1,3 +1,11 @@
+<?php
+/**
+ * 固定ページ
+ * @package WordPress
+ * @subpackage My_Theme
+ * @since My Theme 1.0
+ */
+?>
 <?php get_header(); ?>
 <article class="article">
     <div class="article__title__wrapper">
