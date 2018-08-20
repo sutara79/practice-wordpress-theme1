@@ -1,7 +1,7 @@
 //
 // このファイルだけで使うミックスインと変数
 //
-$height_header: 5.5rem;
+$height_header: 5rem;
 $width_submenu: 240px;
 
 @mixin header_item() { // ヘッダーの高さと、文字の縦方向の中央揃え
@@ -86,11 +86,11 @@ $width_submenu: 240px;
         @include header_item();
         color: $color_txt_normal;
         padding: 0 0.5rem;
-        border-top: 2px solid transparent;
+        border-top: 3px solid transparent;
         border-bottom: 2px solid transparent;
       }
       &:hover > a {
-          border-top: 2px solid $color_txt_link;
+          border-top: 3px solid $color_txt_link;
           color: $color_txt_link;
       }
     }

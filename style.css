@@ -120,7 +120,7 @@ body {
 }
 
 a {
-  color: #3a0;
+  color: #06c;
   text-decoration: none;
   transition: color .3s, border .3s;
   cursor: pointer;
@@ -167,7 +167,7 @@ a:hover {
 .header__logo a {
   display: flex;
   align-items: center;
-  height: 5.5rem;
+  height: 5rem;
   box-sizing: border-box;
   padding-right: 1rem;
   color: #333;
@@ -215,17 +215,17 @@ a:hover {
 .pc-gnav .menu > li > a {
   display: flex;
   align-items: center;
-  height: 5.5rem;
+  height: 5rem;
   box-sizing: border-box;
   color: #555;
   padding: 0 0.5rem;
-  border-top: 2px solid transparent;
+  border-top: 3px solid transparent;
   border-bottom: 2px solid transparent;
 }
 
 .pc-gnav .menu > li:hover > a {
-  border-top: 2px solid #3a0;
-  color: #3a0;
+  border-top: 3px solid #06c;
+  color: #06c;
 }
 
 .pc-gnav .sub-menu {
@@ -260,7 +260,7 @@ a:hover {
 }
 
 .pc-gnav .sub-menu li:hover > a {
-  color: #3a0;
+  color: #06c;
 }
 
 .pc-gnav .sub-menu .sub-menu {
@@ -273,11 +273,11 @@ a:hover {
   visibility: visible;
 }
 
-.article__title__wrapper {
-  background: linear-gradient(115deg, #3a0 0%, #7d4 100%);
+.main__title__wrapper {
+  background: #06c;
 }
 
-.article__title {
+.main__title {
   font-size: 1.2rem;
   color: #fff;
   padding: 1.2rem 0;
@@ -286,10 +286,14 @@ a:hover {
 /**
  * コンテナ
  */
+.main__contents__wrapper {
+  margin: 2rem 0;
+}
+
 /**
  * 投稿内容
  */
-article {
+main {
   margin-bottom: 20px;
 }
 
@@ -297,7 +301,7 @@ article {
   margin-bottom: 10px;
 }
 
-article > p {
+main > p {
   margin-bottom: 1em;
 }
 
@@ -473,7 +477,7 @@ div.wpcf7-response-output {
   .mobile-gnav__btn {
     display: flex;
     align-items: center;
-    height: 5.5rem;
+    height: 5rem;
     box-sizing: border-box;
     color: #666;
     font-size: 1.5rem;
@@ -503,7 +507,7 @@ div.wpcf7-response-output {
     color: #555;
   }
   .mobile-gnav a:hover {
-    color: #3a0;
+    color: #06c;
   }
   .mobile-gnav li {
     margin-top: 1em;

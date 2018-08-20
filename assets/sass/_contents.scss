@@ -1,11 +1,12 @@
 //
 // メイン
 //
-.article__title__wrapper {
-  background: $img_bg_title;
+.main__title__wrapper {
+  // background: $img_bg_title;
+  background: $color_txt_link;
 }
 
-.article__title {
+.main__title {
   font-size: 1.2rem;
   color: $color_txt_rev;
   padding: 1.2rem 0;
@@ -15,17 +16,20 @@
 /**
  * コンテナ
  */
+.main__contents__wrapper {
+  margin: 2rem 0;
+}
 
 /**
  * 投稿内容
  */
-article {
+main {
   margin-bottom: 20px;
 }
 .title-post {
   margin-bottom: 10px;
 }
-article > p {
+main > p {
   margin-bottom: 1em;
 }
 
