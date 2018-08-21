@@ -30,13 +30,13 @@ $width_submenu: 240px;
 }
 
 .header__logo {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 400;
 
   & a {
     @include header_item();
     padding-right: 1rem;
-    color: #333;
+    color: #555;
   }
 }
 
@@ -48,13 +48,6 @@ $width_submenu: 240px;
 
 .mobile-gnav {
   display: none;
-  position: absolute;
-  background: #eee;
-  z-index: 1;
-  transform: translateY(-105%);
-  width: 100%;
-  transition: transform .3s;
-  box-shadow: 0 0 1px #888;
 }
 
 .mobile-gnav__btn:before {
@@ -80,18 +73,23 @@ $width_submenu: 240px;
     // 先頭メニュー
     //
     & > li {
-      margin: 0 0.5rem;
+      margin-left: 1.6rem;
 
       & > a {
         @include header_item();
         color: $color_txt_normal;
-        padding: 0 0.5rem;
         border-top: 3px solid transparent;
-        border-bottom: 2px solid transparent;
+        border-bottom: 3px solid transparent;
       }
-      &:hover > a {
-          border-top: 3px solid $color_txt_link;
-          color: $color_txt_link;
+      &:hover > a,
+      &.current-menu-item > a,
+      &.current-menu-ancestor > a {
+        border-top: 3px solid $color_txt_link;
+        color: $color_txt_link;
+      }
+
+      & .current-menu-item > a {
+        color: $color_txt_link;        
       }
     }
   }
@@ -108,7 +106,7 @@ $width_submenu: 240px;
     right: 0;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    background: #eee;
+    background: #f5f5f5;
     width: $width_submenu;
 
     & a {

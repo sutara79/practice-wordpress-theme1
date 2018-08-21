@@ -1,29 +1,33 @@
 /**
  * フッター
  */
-footer {
-  background: #ddd;
-  border-top: 1px solid #aaa;
+.footer {
+  background: $color_bg_footer;
   color: #333;
-  font-size: 0.9em;
+  font-size: 0.8rem;
   padding: 20px;
 }
+
 .footer-inner {
   margin: 0 auto;
   max-width: $width_pc;
 }
+
 .footernavi > .menu {
   display: table;
   margin: 0 auto 1em;
 }
+
 .footernavi > .menu > li {
   border-right: 1px solid #555;
   display: table-cell;
   padding: 2px 12px;
 }
+
 .footernavi > .menu > li:last-child {
   border-right: none;
 }
+
 .footernavi > .menu > li > a {
   color: #333;
 }

@@ -9,7 +9,7 @@ $gnav_item_padding: 1em;
 //
 @media screen and (max-width: $mobile_max) {
   .header__main {
-    box-shadow: 0 0 2px #aaa;
+    box-shadow: 0 0 3px #999;
   }
   .header__inner {
     display: block;
@@ -61,14 +61,17 @@ $gnav_item_padding: 1em;
   .mobile-gnav {
     display: block;
     padding: 1rem 0;
-    columns: 2 auto;
-    column-gap: 1em;
-    column-rule: solid #ccc 1px;
-    font-size: 0.95em;
-    box-shadow: 0 0 2px #aaa;
+    box-shadow: 0 0 3px #999;
+    position: absolute;
+    background: $color_bg_mobile_gnav;
+    z-index: 1;
+    transform: translateY(-105%);
+    width: 100%;
+    transition: transform .3s;
 
     & a {
       color: $color_txt_normal;
+      font-size: 0.9rem;
 
       &:hover {
         color: $color_txt_link;
@@ -88,6 +91,11 @@ $gnav_item_padding: 1em;
       }
     }
 
+    & .current-menu-item > a {
+      font-weight: bold;
+      color: $color_txt_link;
+    }
+
     & .sub-menu {
       padding-left: 0.8em;
     }
@@ -95,9 +103,15 @@ $gnav_item_padding: 1em;
 
   // スマートフォンなどの画面幅の狭いモバイルでは、
   // グローバルメニューは1列で表示する
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $mobile_gnav_single_max) {
     .mobile-gnav {
       column-count: 1;
     }
+  }
+
+  .mobile-gnav__inner {
+    columns: 2 auto;
+    column-gap: 3em;
+    column-rule: solid #ccc 1px;
   }
 }

@@ -44,12 +44,14 @@
     <nav class="mobile-gnav">
         <h4 class="mobile-gnav__header always-hidden">モバイル向けグローバルメニュー</h4>
         <div class="container">
-            <?php wp_nav_menu(array(
-                'container' => false,
-                'menu' => 'globalnavi',
-                'depth' => 3,
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-            )); ?>
+            <div class="mobile-gnav__inner">
+                <?php wp_nav_menu(array(
+                    'container' => false,
+                    'menu' => 'globalnavi',
+                    'depth' => 3,
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+                )); ?>
+            </div>
         </div>
     </nav>
 </header>

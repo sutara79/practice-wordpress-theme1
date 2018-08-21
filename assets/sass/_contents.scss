@@ -1,9 +1,8 @@
 //
-// メイン
+// タイトル
 //
 .main__title__wrapper {
-  // background: $img_bg_title;
-  background: $color_txt_link;
+  background: $color_bg_title;
 }
 
 .main__title {
@@ -12,54 +11,83 @@
   padding: 1.2rem 0;
 }
 
-
-/**
- * コンテナ
- */
+//
+// コンテンツ
+//
 .main__contents__wrapper {
-  margin: 2rem 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-/**
- * 投稿内容
- */
-main {
-  margin-bottom: 20px;
-}
-.title-post {
-  margin-bottom: 10px;
-}
-main > p {
-  margin-bottom: 1em;
+//
+// 投稿本文
+//
+.main__contents {
+  font-size: 0.95rem;
+  flex-basis: 65%;
+  @include flex_item_word_wrap();
+  line-height: 1.4;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & h2 {
+    font-size: 1.6em;
+    margin: 1.5em 0;
+    font-weight: 700;
+  }
+
+  & p {
+    margin: 1em 0;
+  }
+
+  & img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+
+  & pre {
+    background: $color_bg_mobile_gnav;
+    padding: 1.5em 1em;
+    font-size: 14.5px;
+    border-radius: 2px;
+    font-family: monospace;
+    overflow: auto;
+  }
 }
 
-/**
- * ジャンボトロン
- */
-
-.jumbotron {
-  height: 40vw;
-  background-color: gray;
-  background-position: center center;
-  background-size: cover;
+//
+// サイドバー
+//
+.sidebar {
+  flex-basis: 30%;
+  @include flex_item_word_wrap();
 }
 
-.jumbotron-text-wrapper {
-  padding-top: 4vw;
-  color: $color_txt_rev;
-  text-shadow: 0 0 2px #000;
+//
+// サイドバー内の目次
+//
+.toc_widget {
+  padding: 1rem;
+  background: $color_bg_mobile_gnav;
+  font-size: 0.9rem;
+
+  & .widget-title {
+    margin-bottom: 1.5rem;
+  }
 }
-.jumbotron-main {
-  font-size: 2rem;
-}
-.jumbotron-sub {
-  font-size: 1rem;
-}
-.jumbotron-sub:before {
-  content: '';
-  display: block;
-  margin: 1rem 0;
-  width: 100px;
-  border-top: 1px solid $color_txt_rev;
-  box-shadow: 0 0 2px #000;
+
+.toc_widget_list {
+  & li {
+    margin: 0.8em 0;
+  }
+
+  & ul {
+    margin-left: 0.8em;
+  }
 }

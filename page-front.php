@@ -1,6 +1,7 @@
 <?php
 /**
  * フロントページ (ホームページ)
+ *
  * @package WordPress
  * @subpackage My_Theme
  * @since My Theme 1.0

@@ -5,7 +5,7 @@ Theme URI: https://github.com/sutara79/practice-wordpress-theme1
 Author: Yuusaku Miyazaki
 Author URI: https://github.com/sutara79/
 Description: 
-Version: 1.0.0
+Version: 0.0.1
 License: MIT License
 License URI: http://opensource.org/licenses/mit-license.php
 Tags: practice
@@ -120,7 +120,7 @@ body {
 }
 
 a {
-  color: #06c;
+  color: #28d;
   text-decoration: none;
   transition: color .3s, border .3s;
   cursor: pointer;
@@ -160,8 +160,8 @@ a:hover {
 }
 
 .header__logo {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .header__logo a {
@@ -170,7 +170,7 @@ a:hover {
   height: 5rem;
   box-sizing: border-box;
   padding-right: 1rem;
-  color: #333;
+  color: #555;
 }
 
 #mobile-gnav__checkbox,
@@ -181,13 +181,6 @@ a:hover {
 
 .mobile-gnav {
   display: none;
-  position: absolute;
-  background: #eee;
-  z-index: 1;
-  transform: translateY(-105%);
-  width: 100%;
-  transition: transform .3s;
-  box-shadow: 0 0 1px #888;
 }
 
 .mobile-gnav__btn:before {
@@ -209,7 +202,7 @@ a:hover {
 }
 
 .pc-gnav .menu > li {
-  margin: 0 0.5rem;
+  margin-left: 1.6rem;
 }
 
 .pc-gnav .menu > li > a {
@@ -218,14 +211,19 @@ a:hover {
   height: 5rem;
   box-sizing: border-box;
   color: #555;
-  padding: 0 0.5rem;
   border-top: 3px solid transparent;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
-.pc-gnav .menu > li:hover > a {
-  border-top: 3px solid #06c;
-  color: #06c;
+.pc-gnav .menu > li:hover > a,
+.pc-gnav .menu > li.current-menu-item > a,
+.pc-gnav .menu > li.current-menu-ancestor > a {
+  border-top: 3px solid #28d;
+  color: #28d;
+}
+
+.pc-gnav .menu > li .current-menu-item > a {
+  color: #28d;
 }
 
 .pc-gnav .sub-menu {
@@ -237,7 +235,7 @@ a:hover {
   right: 0;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  background: #eee;
+  background: #f5f5f5;
   width: 240px;
 }
 
@@ -260,7 +258,7 @@ a:hover {
 }
 
 .pc-gnav .sub-menu li:hover > a {
-  color: #06c;
+  color: #28d;
 }
 
 .pc-gnav .sub-menu .sub-menu {
@@ -274,7 +272,7 @@ a:hover {
 }
 
 .main__title__wrapper {
-  background: #06c;
+  background: #16c;
 }
 
 .main__title {
@@ -283,69 +281,82 @@ a:hover {
   padding: 1.2rem 0;
 }
 
-/**
- * コンテナ
- */
 .main__contents__wrapper {
-  margin: 2rem 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-/**
- * 投稿内容
- */
-main {
-  margin-bottom: 20px;
+.main__contents {
+  font-size: 0.95rem;
+  flex-basis: 65%;
+  word-wrap: break-word;
+  min-width: 1px;
+  line-height: 1.4;
 }
 
-.title-post {
-  margin-bottom: 10px;
+.main__contents > :first-child {
+  margin-top: 0;
 }
 
-main > p {
-  margin-bottom: 1em;
+.main__contents h2 {
+  font-size: 1.6em;
+  margin: 1.5em 0;
+  font-weight: 700;
 }
 
-/**
- * ジャンボトロン
- */
-.jumbotron {
-  height: 40vw;
-  background-color: gray;
-  background-position: center center;
-  background-size: cover;
+.main__contents p {
+  margin: 1em 0;
 }
 
-.jumbotron-text-wrapper {
-  padding-top: 4vw;
-  color: #fff;
-  text-shadow: 0 0 2px #000;
+.main__contents img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
 }
 
-.jumbotron-main {
-  font-size: 2rem;
+.main__contents pre {
+  background: #eee;
+  padding: 1.5em 1em;
+  font-size: 14.5px;
+  border-radius: 2px;
+  font-family: monospace;
+  overflow: auto;
 }
 
-.jumbotron-sub {
-  font-size: 1rem;
+.sidebar {
+  flex-basis: 30%;
+  word-wrap: break-word;
+  min-width: 1px;
 }
 
-.jumbotron-sub:before {
-  content: '';
-  display: block;
-  margin: 1rem 0;
-  width: 100px;
-  border-top: 1px solid #fff;
-  box-shadow: 0 0 2px #000;
+.toc_widget {
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+.toc_widget .widget-title {
+  margin-bottom: 1.5rem;
+}
+
+.toc_widget_list li {
+  margin: 0.8em 0;
+}
+
+.toc_widget_list ul {
+  margin-left: 0.8em;
 }
 
 /**
  * フッター
  */
-footer {
+.footer {
   background: #ddd;
-  border-top: 1px solid #aaa;
   color: #333;
-  font-size: 0.9em;
+  font-size: 0.8rem;
   padding: 20px;
 }
 
@@ -452,9 +463,39 @@ div.wpcf7-response-output {
   padding: 1em !important;
 }
 
+.jumbotron {
+  height: 40vw;
+  background-color: gray;
+  background-position: center center;
+  background-size: cover;
+}
+
+.jumbotron-text-wrapper {
+  padding-top: 4vw;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.jumbotron-main {
+  font-size: 2rem;
+}
+
+.jumbotron-sub {
+  font-size: 1rem;
+}
+
+.jumbotron-sub:before {
+  content: '';
+  display: block;
+  margin: 1rem 0;
+  width: 100px;
+  border-top: 1px solid #fff;
+  box-shadow: 0 0 2px #000;
+}
+
 @media screen and (max-width: 1047px) {
   .header__main {
-    box-shadow: 0 0 2px #aaa;
+    box-shadow: 0 0 3px #999;
   }
   .header__inner {
     display: block;
@@ -497,17 +538,20 @@ div.wpcf7-response-output {
   .mobile-gnav {
     display: block;
     padding: 1rem 0;
-    columns: 2 auto;
-    column-gap: 1em;
-    column-rule: solid #ccc 1px;
-    font-size: 0.95em;
-    box-shadow: 0 0 2px #aaa;
+    box-shadow: 0 0 3px #999;
+    position: absolute;
+    background: #eee;
+    z-index: 1;
+    transform: translateY(-105%);
+    width: 100%;
+    transition: transform .3s;
   }
   .mobile-gnav a {
     color: #555;
+    font-size: 0.9rem;
   }
   .mobile-gnav a:hover {
-    color: #06c;
+    color: #28d;
   }
   .mobile-gnav li {
     margin-top: 1em;
@@ -519,6 +563,10 @@ div.wpcf7-response-output {
   .mobile-gnav .menu > li:last-child {
     border-bottom: 0;
   }
+  .mobile-gnav .current-menu-item > a {
+    font-weight: bold;
+    color: #28d;
+  }
   .mobile-gnav .sub-menu {
     padding-left: 0.8em;
   }
@@ -527,5 +575,32 @@ div.wpcf7-response-output {
 @media screen and (max-width: 1047px) and (max-width: 500px) {
   .mobile-gnav {
     column-count: 1;
+  }
+}
+
+@media screen and (max-width: 1047px) {
+  .mobile-gnav__inner {
+    columns: 2 auto;
+    column-gap: 3em;
+    column-rule: solid #ccc 1px;
+  }
+}
+
+@media screen and (max-width: 1047px) {
+  .main__title {
+    font-size: 1.1rem;
+  }
+  .main__contents h2 {
+    font-size: 1.3em;
+    margin: 1em 0;
+  }
+}
+
+@media screen and (max-width: 1047px) and (max-width: 800px) {
+  .main__contents__wrapper {
+    display: block;
+  }
+  .toc_widget {
+    display: none;
   }
 }

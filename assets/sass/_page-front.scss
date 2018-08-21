@@ -1,0 +1,29 @@
+//
+// ジャンボトロン
+//
+.jumbotron {
+  height: 40vw;
+  background-color: gray;
+  background-position: center center;
+  background-size: cover;
+}
+
+.jumbotron-text-wrapper {
+  padding-top: 4vw;
+  color: $color_txt_rev;
+  text-shadow: 0 0 2px #000;
+}
+.jumbotron-main {
+  font-size: 2rem;
+}
+.jumbotron-sub {
+  font-size: 1rem;
+}
+.jumbotron-sub:before {
+  content: '';
+  display: block;
+  margin: 1rem 0;
+  width: 100px;
+  border-top: 1px solid $color_txt_rev;
+  box-shadow: 0 0 2px #000;
+}

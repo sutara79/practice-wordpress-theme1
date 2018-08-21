@@ -1,0 +1,32 @@
+//
+// コンテンツ (モバイル向け)
+//
+@media screen and (max-width: $mobile_max) {
+  // タイトル
+  .main__title {
+    font-size: 1.1rem;
+  }
+
+  // 投稿本文
+  .main__contents {
+    & h2 {
+      font-size: 1.3em;
+      margin: 1em 0;
+    }
+  }
+
+  // 本文の幅が広くなりすぎないように、
+  // ギリギリまで目次を表示する
+  @media screen and (max-width: $mobile_toc_hide_max) {
+    // コンテンツ
+    // ギリギリまで flexbox を維持する
+    .main__contents__wrapper {
+      display: block;
+    }
+
+    // サイドバー内の目次
+    .toc_widget {
+      display: none;
+    }
+  }
+}
