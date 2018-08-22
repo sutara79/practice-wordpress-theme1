@@ -6,11 +6,11 @@
  */
 
 // 複数のファイルに分散している関数を読み込む
+require_once locate_template('lib/sutara79-options.php');
 require_once locate_template('lib/widget.php');
 require_once locate_template('lib/custom-menu.php');
-require_once locate_template('lib/copyright.php');
-require_once locate_template('lib/jumbotron.php');
 require_once locate_template('lib/javascript.php');
+require_once locate_template('lib/helpers.php');
 
 // アドミンバーを非表示にする
 add_filter('show_admin_bar', '__return_false');

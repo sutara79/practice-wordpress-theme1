@@ -8,18 +8,7 @@
 ?>
 
 <?php get_header(); ?>
-<div class="jumbotron" style="background-image: url(<?php echo get_option('jumbotron-img') ?>); background-position: center <?php echo get_option('jumbotron-position') ?>">
-    <div class="container">
-        <div class="jumbotron-text-wrapper">
-            <div class="jumbotron-main">
-                TODO: メッセージ
-            </div>
-            <div class="jumbotron-sub">
-                TODO: サブ
-            </div>
-        </div>
-    </div>
-</div>
+<?php echo sutara79_get_jumbotron(); ?>
 <div class="main">
     <div class="main__contents__wrapper">
         <div class="container">
