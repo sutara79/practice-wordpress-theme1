@@ -1,9 +1,8 @@
 <?php
 /**
  * 関数群
- * @package WordPress
- * @subpackage My_Theme
- * @since My Theme 1.0
+ * @package WordPress\sutara79
+ * @since 1.0.0
  */
 
 // 複数のファイルに分散している関数を読み込む

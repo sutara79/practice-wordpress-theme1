@@ -5,9 +5,8 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package WordPress
- * @subpackage My_Theme
- * @since My Theme 1.0
+ * @package WordPress\sutara79
+ * @since 1.0.0
  */
 
 /*

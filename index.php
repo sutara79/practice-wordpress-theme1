@@ -1,9 +1,8 @@
 <?php
 /**
  * index.php
- * @package WordPress
- * @subpackage My_Theme
- * @since My Theme 1.0
+ * @package WordPress\sutara79
+ * @since 1.0.0
  */
 ?>
 <?php get_header(); ?>

@@ -1,9 +1,8 @@
 <?php
 /**
  * サイドバー
- * @package WordPress
- * @subpackage My_Theme
- * @since My Theme 1.0
+ * @package WordPress\sutara79
+ * @since 1.0.0
  */
 ?>
 <div class="sidebar">

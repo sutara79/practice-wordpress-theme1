@@ -1,11 +1,11 @@
-# practice-wordpress-theme1
+# wordpress-theme-sutara79
 WordPressテーマの練習です。
 
 ## ScreenShot
-![練習用テーマのスクリーンショット](screenshot.png)
+![](screenshot.png)
 
 ## License
-[MIT License](http://www.opensource.org/licenses/mit-license.php)
+MIT
 
 ## Author
 [Yuusaku Miyazaki](http://sutara79.hatenablog.com/entry/2015/10/14/143207)
