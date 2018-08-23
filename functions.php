@@ -6,7 +6,7 @@
  */
 
 // 複数のファイルに分散している関数を読み込む
-require_once locate_template('lib/sutara79-settings.php');
+require_once locate_template('lib/admin-menu.php');
 require_once locate_template('lib/widget.php');
 require_once locate_template('lib/custom-menu.php');
 require_once locate_template('lib/javascript.php');

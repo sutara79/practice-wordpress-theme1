@@ -1,13 +1,13 @@
 <?php
+// ページ内で使うセクションを読み込む
+require_once 'Sections/Section.php';
+require_once 'Sections/Copyright.php';
+require_once 'Sections/Img.php';
+
 /**
- * 管理画面でテーマの設定の一部を変更する。
- * クラスとして定義。
+ * 管理画面の新規ページ
  */
-
-require_once 'sutara79-settings-super.php'; // Sutara79SettingsSuper
-require_once 'sutara79-settings-copyright.php'; // Sutara79SettingsCopyright
-
-class Sutara79Settings {
+class Page {
     var $name = 'sutara79';
     var $page = 'sutara79-settings';
     var $group = 'sutara79-settings-group';
@@ -43,7 +43,7 @@ class Sutara79Settings {
     }
 
     function addSections() {
-        new Sutara79SettingsCopyright($this->page, $this->group);
+        new Copyright($this->page, $this->group);
+        new Img($this->page, $this->group);
     }
 }
-new Sutara79Settings();

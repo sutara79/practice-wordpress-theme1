@@ -1,5 +1,8 @@
 <?php
-class Sutara79SettingsCopyright extends Sutara79SettingsSuper {
+/**
+ * セクション: 著作権情報
+ */
+class Copyright extends Section {
     var $section = 'sutara79-settings-copyright';
     var $title = '著作権情報';
     var $description = 'フッターに表示します。';
@@ -21,21 +24,18 @@ class Sutara79SettingsCopyright extends Sutara79SettingsSuper {
         ]
     ];
 
-    function copyrightName($args) {
-        $id = $args['id'];
+    function copyrightName($id) {
         echo '<input id="'.$id.'" class="regular-text" type="text" name="'.$id.'" value="';
         form_option($id);
         echo '" >';
     }
 
-    function copyrightYear($args) {
-        $id = $args['id'];
+    function copyrightYear($id) {
         $val = get_option($id) ? get_option($id) : date('Y');
         echo '<input id="'.$id.'" class="regular-text" type="number" name="'.$id.'" value="'.$val.'">';
     }
 
-    function copyrightYearCurrent($args) {
-        $id = $args['id'];
+    function copyrightYearCurrent($id) {
         $checked = get_option($id) ? 'checked="checked"' : '';
         echo '<input id="'.$id.'" class="regular-text" type="checkbox" name="'.$id.'" value="true" '.$checked.'>';
     }

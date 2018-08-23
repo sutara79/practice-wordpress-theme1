@@ -1,5 +1,8 @@
 <?php
-class Sutara79SettingsSuper {
+/**
+ * セクションのスーパークラス
+ */
+class Section {
     var $section;
     var $page;
     var $group;
@@ -34,7 +37,7 @@ class Sutara79SettingsSuper {
                 [$this, $field['callback']], // コールバック関数。この関数の実行結果が出力される
                 $this->page,
                 $this->section,
-                ['id' => $id]
+                $id // コールバック関数の引数
             );
         }
     }

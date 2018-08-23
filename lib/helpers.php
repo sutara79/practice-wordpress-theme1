@@ -12,11 +12,11 @@
 function sutara79_get_copyright() {
     $year = get_option('sutara79-copyright-year');
     $current = date('Y');
-    if (get_option('sutara79-copyright-year-current') === 'true' &&
-        $first < $current) {
-        $year = "$first-$current";
+    if (get_option('sutara79-copyright-year-current') == 'true' &&
+        intval($year) < $current) {
+        $year .= '-'.$current;
     }
-    return '&copy; ' . $year . ' ' . get_option('sutara79-copyright-name');
+    return '&copy; '.$year.' '.get_option('sutara79-copyright-name');
 }
 
 /**
@@ -26,7 +26,7 @@ function sutara79_get_copyright() {
  */
 function sutara79_get_jumbotron() {
     ?>
-    <div class="jumbotron" style="background-image: url(<?php echo get_option('sutara79-jumbotron-img') ?>); background-position: center <?php echo get_option('sutara79-jumbotron-position') ?>">
+    <div class="jumbotron" style="background-image: url(<?php echo get_option('sutara79-jumbotron-src') ?>); background-position: center <?php echo get_option('sutara79-jumbotron-position') ?>">
         <div class="container">
             <div class="jumbotron-text-wrapper">
                 <div class="jumbotron-main">
