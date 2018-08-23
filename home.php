@@ -15,13 +15,13 @@
             <h1 class="main__title"><?php echo get_the_title($page_id); ?></h1>
         </div>
     </div>
-    <div class="main__contents__wrapper">
-        <div class="container">
+    <div class="container main__contents__wrapper">
+        <div class="main__contents">
             <div>
                 <?php
-                    // 参考: https://teratail.com/questions/142135
-                    $no_br_text = get_post($page_id)->post_content; // 改行が画面に反映されない
-                    echo apply_filters('the_content', $no_br_text); // 改行が画面に反映される
+                // 参考: https://teratail.com/questions/142135
+                $no_br_text = get_post($page_id)->post_content; // 改行が画面に反映されない
+                echo apply_filters('the_content', $no_br_text); // 改行が画面に反映される
                  ?>
             </div>
             <div>
@@ -40,6 +40,7 @@
                 <?php endif; ?>
             </div>
         </div>
+        <?php get_sidebar(); ?>
     </div>
 </div>
 <?php get_footer(); ?>

@@ -101,17 +101,17 @@ $gnav_item_padding: 1em;
     }
   }
 
-  // スマートフォンなどの画面幅の狭いモバイルでは、
-  // グローバルメニューは1列で表示する
-  @media screen and (max-width: $mobile_gnav_single_max) {
-    .mobile-gnav {
-      column-count: 1;
-    }
-  }
-
   .mobile-gnav__inner {
     columns: 2 auto;
     column-gap: 3em;
     column-rule: solid #ccc 1px;
+  }
+
+  // スマートフォンなどの画面幅の狭いモバイルでは、
+  // グローバルメニューは1列で表示する
+  @media screen and (max-width: $mobile_gnav_single_max) {
+    .mobile-gnav__inner {
+      column-count: 1;
+    }
   }
 }

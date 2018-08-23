@@ -40,3 +40,17 @@ function sutara79_get_jumbotron() {
     </div>
     <?php
 }
+
+/**
+ * ロゴを生成する
+ * @return string ロゴのimg要素またはWebサイト名
+ */
+function sutara79_get_logo() {
+    $src = get_option('sutara79-logo-src');
+    $txt = get_bloginfo('name');
+    if ($src) {
+        return '<img class="header__logo__img" src="'.$src.'" alt="'.$txt.'">';
+    } else {
+        return $txt;
+    }
+}

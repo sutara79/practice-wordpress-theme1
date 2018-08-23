@@ -12,8 +12,8 @@
             <h1 class="main__title"><?php the_title(); ?></h1>
         </div>
     </div>
-    <div class="main__contents__wrapper">
-        <div class="container">
+    <div class="container main__contents__wrapper">
+        <div class="main__contents">
             <?php the_post(); ?>
             <div class="post__header">
                 <span>カテゴリ：<?php the_category(', ') ?></span>

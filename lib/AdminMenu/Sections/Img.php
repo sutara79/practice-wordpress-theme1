@@ -8,6 +8,16 @@ class Img extends Section {
     var $description = '';
     var $fields = [
         [
+            'id' => 'sutara79-logo-src',
+            'title' => 'ロゴ (URL)',
+            'callback' => 'logoSrc'
+        ],
+        [
+            'id' => 'sutara79-favicon-src',
+            'title' => 'ファビコン (URL)',
+            'callback' => 'faviconSrc'
+        ],
+        [
             'id' => 'sutara79-jumbotron-src',
             'title' => 'ジャンボトロン (URL)',
             'callback' => 'jumbotronSrc'
@@ -18,6 +28,18 @@ class Img extends Section {
             'callback' => 'jumbotronPosition'
         ]
     ];
+
+    function logoSrc($id) {
+        echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';
+        form_option($id);
+        echo '" >';
+    }
+
+    function faviconSrc($id) {
+        echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';
+        form_option($id);
+        echo '" >';
+    }
 
     function jumbotronSrc($id) {
         echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';

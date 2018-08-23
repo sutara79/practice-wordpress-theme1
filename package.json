@@ -9,7 +9,7 @@
     "url": "https://github.com/sutara79/practice-wordpress-theme1.git"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.2",
+    "autoprefixer": "^9.1.3",
     "node-sass": "^4.9.2",
     "postcss-cli": "^6.0.0"
   },

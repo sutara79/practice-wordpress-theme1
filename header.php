@@ -11,6 +11,7 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="<?php bloginfo('description'); ?>">
+<link rel="icon" type="image/png" href="<?php echo get_option('sutara79-favicon-src'); ?>">
 <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -23,7 +24,9 @@
         <div class="container">
             <div class="header__inner">
                 <h2 class="header__logo">
-                    <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+                    <a href="<?php bloginfo('url'); ?>">
+                        <?php echo sutara79_get_logo(); ?>
+                    </a>
                 </h2>
                 <div class="mobile-gnav__btn-wrapper">
                     <label for="mobile-gnav__checkbox" class="mobile-gnav__btn icon-menu"></label>
