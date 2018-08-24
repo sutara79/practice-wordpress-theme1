@@ -14,3 +14,6 @@ require_once locate_template('lib/helpers.php');
 
 // アドミンバーを非表示にする
 add_filter('show_admin_bar', '__return_false');
+
+// アイキャッチ画像を有効にする
+add_theme_support('post-thumbnails'); 
