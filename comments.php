@@ -41,25 +41,21 @@ function twentyfifteen_comment_nav() {
 }
 ?>
 
-<div id="comments" class="comments-area">
-
+<div id="comments" class="comment-area">
     <?php if ( have_comments() ) : ?>
-        <h2 class="comments-title">
-            <?php
-                printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfifteen' ),
-                    number_format_i18n( get_comments_number() ), get_the_title() );
-            ?>
-        </h2>
+        <h2 class="comment-area__title"><?php _e('コメント') ?></h2>
 
         <?php twentyfifteen_comment_nav(); ?>
 
-        <ol class="comment-list">
+        <ol class="comment__list">
             <?php
-                wp_list_comments( array(
-                    'style'             => 'ol',
-                    'short_ping'    => true,
+                wp_list_comments(array(
+                    'style'       => 'ol',
+                    'type'        => 'comment',
                     'avatar_size' => 56,
-                ) );
+                    'max_depth'   => 2,
+                    'callback'    => 'sutara79_comment'
+                ));
             ?>
         </ol><!-- .comment-list -->
 
@@ -75,5 +71,4 @@ function twentyfifteen_comment_nav() {
     <?php endif; ?>
 
     <?php comment_form(); ?>
-
 </div><!-- .comments-area -->
