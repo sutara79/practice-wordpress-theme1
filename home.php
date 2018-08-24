@@ -8,21 +8,21 @@
 ?>
 
 <?php get_header(); ?>
-<?php $page_id = get_option('page_for_posts'); ?>
 <div class="main">
     <div class="main__title__wrapper">
         <div class="container">
-            <h1 class="main__title"><?php echo get_the_title($page_id); ?></h1>
+            <h1 class="main__title">
+                <?php echo apply_filters('the_title', get_queried_object()->post_title) ?>
+            </h1>
         </div>
     </div>
     <div class="container main__contents__wrapper">
         <div class="main__contents">
             <div>
-                <?php
-                // 参考: https://teratail.com/questions/142135
-                $no_br_text = get_post($page_id)->post_content; // 改行が画面に反映されない
-                echo apply_filters('the_content', $no_br_text); // 改行が画面に反映される
-                 ?>
+                <?php 
+                参考: https://teratail.com/questions/142135
+                echo apply_filters('the_content', get_queried_object()->post_content);
+                ?>
             </div>
             <div>
                 <?php if (have_posts()) : ?>

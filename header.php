@@ -10,9 +10,18 @@
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="<?php bloginfo('description'); ?>">
-<link rel="icon" type="image/png" href="<?php echo get_option('sutara79-favicon-src'); ?>">
 <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+<meta name="description" content="<?php sutara79_this_excerpt() ?>">
+
+<meta property="og:title"       content="<?php trim(wp_title('')) ?>" />
+<meta property="og:site_name"   content="<?php bloginfo('name') ?>" />
+<meta property="og:description" content="<?php sutara79_this_excerpt() ?>">
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="<?php echo get_permalink(get_queried_object()->ID) ?>" />
+<meta property="og:image"       content="<?php echo sutara79_og_image() ?>" />
+<meta name="twitter:card"       content="summary" />
+
+<link rel="icon" type="image/png" href="<?php echo get_option('sutara79-favicon-src'); ?>">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 <?php wp_head(); ?>
@@ -25,7 +34,7 @@
             <div class="header__inner">
                 <h2 class="header__logo">
                     <a href="<?php bloginfo('url'); ?>">
-                        <?php echo sutara79_get_logo(); ?>
+                        <?php sutara79_logo(); ?>
                     </a>
                 </h2>
                 <div class="mobile-gnav__btn-wrapper">

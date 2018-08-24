@@ -10,17 +10,22 @@ class Img extends Section {
         [
             'id' => 'sutara79-logo-src',
             'title' => 'ロゴ (URL)',
-            'callback' => 'logoSrc'
+            'callback' => 'commonUrl'
         ],
         [
             'id' => 'sutara79-favicon-src',
             'title' => 'ファビコン (URL)',
-            'callback' => 'faviconSrc'
+            'callback' => 'commonUrl'
+        ],
+        [
+            'id' => 'sutara79-fimg-src',
+            'title' => 'デフォルトのSNSシェア用画像 (URL)',
+            'callback' => 'commonUrl'
         ],
         [
             'id' => 'sutara79-jumbotron-src',
             'title' => 'ジャンボトロン (URL)',
-            'callback' => 'jumbotronSrc'
+            'callback' => 'commonUrl'
         ],
         [
             'id' => 'sutara79-jumbotron-position',
@@ -29,19 +34,7 @@ class Img extends Section {
         ]
     ];
 
-    function logoSrc($id) {
-        echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';
-        form_option($id);
-        echo '" >';
-    }
-
-    function faviconSrc($id) {
-        echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';
-        form_option($id);
-        echo '" >';
-    }
-
-    function jumbotronSrc($id) {
+    function commonUrl($id) {
         echo '<input id="'.$id.'" class="regular-text" type="url" name="'.$id.'" value="';
         form_option($id);
         echo '" >';

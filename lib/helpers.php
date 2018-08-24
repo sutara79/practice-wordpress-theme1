@@ -20,37 +20,44 @@ function sutara79_get_copyright() {
 }
 
 /**
- * ジャンボトロンを生成する (テンプレート内で使用)
- *
- * @return string ジャンボトロンのHTML
- */
-function sutara79_get_jumbotron() {
-    ?>
-    <div class="jumbotron" style="background-image: url(<?php echo get_option('sutara79-jumbotron-src') ?>); background-position: center <?php echo get_option('sutara79-jumbotron-position') ?>">
-        <div class="container">
-            <div class="jumbotron-text-wrapper">
-                <div class="jumbotron-main">
-                    TODO: メッセージ
-                </div>
-                <div class="jumbotron-sub">
-                    TODO: サブ
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php
-}
-
-/**
  * ロゴを生成する
  * @return string ロゴのimg要素またはWebサイト名
  */
-function sutara79_get_logo() {
+function sutara79_logo() {
     $src = get_option('sutara79-logo-src');
     $txt = get_bloginfo('name');
     if ($src) {
-        return '<img class="header__logo__img" src="'.$src.'" alt="'.$txt.'">';
-    } else {
-        return $txt;
+        $txt = '<img class="header__logo__img" src="'.$src.'" alt="'.$txt.'">';
     }
+    echo $txt;
+}
+
+/**
+ * ループ外で、現在のページの抜粋を表示する
+ */
+function sutara79_this_excerpt() {
+    global $post;
+    $post = get_queried_object();
+    setup_postdata($post);
+    echo get_the_excerpt();
+    wp_reset_postdata();
+}
+
+/**
+ * og:image 用のURLを表示する
+ */
+function sutara79_og_image() {
+    global $post;
+    $post = get_queried_object();
+    setup_postdata($post);
+
+    if (has_post_thumbnail()) {
+        // そのページにアイキャッチ画像があれば、それを表示する
+        the_post_thumbnail_url();
+    } else {
+        // なければ、管理画面で設定した、共通の画像を表示する
+        echo get_option('sutara79-fimg-src');
+    }
+
+    wp_reset_postdata();
 }

@@ -88,8 +88,9 @@ $width_submenu: 240px;
         color: $color_txt_link;
       }
 
-      & .current-menu-item > a {
-        color: $color_txt_link;        
+      & .current-menu-item > a,
+      & .current-menu-ancestor > a {
+        color: $color_txt_link;
       }
     }
   }
@@ -138,7 +139,11 @@ $width_submenu: 240px;
   }
 
   & li:hover > .sub-menu { // 親メニューホバー時のサブメニュー
-      opacity: 1.0;
-      visibility: visible;
+    opacity: 1.0;
+    visibility: visible;
+  }
+
+  & .sub-menu .sub-menu {
+    top: -1px; // .sub-menu の border-top-width と同じ値
   }
 }
