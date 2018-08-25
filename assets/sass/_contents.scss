@@ -27,7 +27,7 @@
 //
 .main__contents {
   font-size: 0.95rem;
-  flex-basis: 65%;
+  flex-basis: $width_main_contents;
   @include flex_item_word_wrap();
   line-height: 1.4;
 
@@ -65,7 +65,7 @@
 // サイドバー
 //
 .sidebar {
-  flex-basis: 30%;
+  flex-basis: $width_side_contents;
   @include flex_item_word_wrap();
 }
 

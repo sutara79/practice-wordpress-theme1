@@ -1,15 +1,14 @@
-//
 // ブレークポイント
-//
 $width_pc: 1000px;
-$container_padding: 24px;
-$mobile_max: 1047px;
+$container_padding: 16px;
+$mobile_max: 1031px; // $width_pc + ($container_padding * 2 -1px)
 $mobile_gnav_single_max: 500px;
 $mobile_toc_hide_max: 800px;
 
-//
-// 色
-//
+// メインコンテンツの幅
+$width_main_contents: 65%;
+$width_side_contents: 30%;
+
 
 // 文字色
 $color_txt_normal: #4b4b4b;
@@ -23,18 +22,13 @@ $color_bg_mobile_gnav: #eee;
 $color_bg_footer: #ddd;
 $color_bg_title: #16c;
 
-// グラデーション
-// $img_bg_title: linear-gradient(115deg, #06c 0%, #47d 100%);
-
 // 入力欄 枠線
 $color_border_input: #bbb;
 
 
-//
 // flexアイテムでword-wrapを機能させる
 // 参照: https://qiita.com/yuji38kwmt/items/ba8d59eb0abef1956bae
-//
 @mixin flex_item_word_wrap() {
   word-wrap: break-word;
-  min-width: 1px;
+  min-width: 1px; // min-width が欠かせない
 }

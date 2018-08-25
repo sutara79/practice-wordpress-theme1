@@ -49,13 +49,12 @@ function twentyfifteen_comment_nav() {
 
         <ol class="comment__list">
             <?php
-                wp_list_comments(array(
-                    'style'       => 'ol',
-                    'type'        => 'comment',
-                    'avatar_size' => 56,
-                    'max_depth'   => 2,
-                    'callback'    => 'sutara79_comment'
-                ));
+            wp_list_comments(array(
+                'style'       => 'ol',
+                'type'        => 'comment',
+                'avatar_size' => 56,
+                'callback'    => 'sutara79_comment'
+            ));
             ?>
         </ol><!-- .comment-list -->
 
@@ -64,11 +63,82 @@ function twentyfifteen_comment_nav() {
     <?php endif; // have_comments() ?>
 
     <?php
-        // If comments are closed and there are comments, let's leave a little note, shall we?
-        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+    // If comments are closed and there are comments, let's leave a little note, shall we?
+    if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
     ?>
         <p class="no-comments"><?php _e('コメントは受け付けていません。'); ?></p>
     <?php endif; ?>
 
-    <?php comment_form(); ?>
+    <?php
+    // コメントフォーム
+    class Template {
+        function __construct() {
+            $this->commenter = wp_get_current_commenter();
+            $this->req = get_option('require_name_email');
+            $this->field_req = $this->req ? '<span class="field-required">'.__('必須').'</span>' : '';
+            $this->aria_req  = $this->req ? ' aria-required="true"' : '';
+        }
+
+        // コメント入力欄のテンプレート
+        function comment_field() {
+            return <<< EOT
+            <p class="comment-form-comment comment__field__wrapper">
+                <textarea id="comment" name="comment" class="respond__body" cols="45" rows="8" aria-required="true"></textarea>
+            </p>
+EOT;
+        }
+
+        // 「名前」のテンプレート
+        function author() {
+            $label = __('名前');
+            $value = esc_attr($this->commenter['comment_author']);
+            return <<< EOT
+            <p class="comment-form-author comment__field__wrapper">
+                <label for="author">{$label}{$this->field_req}</label>                
+                <input id="author" name="author" class="respond__field" type="text" value="{$value}" size="30"{$aria_req}>
+            </p>
+EOT;
+        }
+
+        // 「メールアドレス」のテンプレート
+        function email() {
+            $label = __('メールアドレス');
+            $value = esc_attr($this->commenter['comment_author_email']);
+            return <<< EOT
+            <p class="comment-form-email comment__field__wrapper">
+                <label for="email">{$label}{$this->field_req}</label>                
+                <input id="email" name="email" class="respond__field" type="email" value="{$value}" size="30"{$aria_req}>
+            </p>
+EOT;
+        }
+
+        // 「Webサイト」のテンプレート
+        function url() {
+            $label = __('Webサイト');
+            $value = esc_attr($this->commenter['comment_author_url']);
+            return <<< EOT
+            <p class="comment-form-url comment__field__wrapper">
+                <label for="url">{$label}</label>
+                <input id="url" name="url" class="respond__field" type="url" value="{$value}" size="30">
+            </p>
+EOT;
+        }
+    }
+    $template = new Template();
+
+    $args = array(
+        'title_reply_to' => __('%s に返信する'),
+        'cancel_reply_link' => __('返信をキャンセル'),
+        'comment_field' => $template->comment_field(),
+        'comment_notes_before' => '',
+        'comment_notes_after' => '',
+        'fields' => apply_filters('comment_form_default_fields', array(
+            'author' => $template->author(),
+            'email' => $template->email(),
+            'url' => $template->url()
+        ))
+    );
+
+    comment_form($args);
+    ?>
 </div><!-- .comments-area -->

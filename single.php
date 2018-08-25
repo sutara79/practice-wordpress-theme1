@@ -22,10 +22,10 @@
             <div class="post__body">
                 <?php the_content(); ?>
             </div>
-            <?php comments_template(); ?>
         </div>
         <?php get_sidebar(); ?>
     </div>
+    <div class="container"><?php comments_template(); ?></div>
 </div>
 </div>
 <?php get_footer(); ?>
