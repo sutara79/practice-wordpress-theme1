@@ -11,7 +11,6 @@ require_once locate_template('lib/widget.php');
 require_once locate_template('lib/custom-menu.php');
 require_once locate_template('lib/javascript.php');
 require_once locate_template('lib/helpers.php');
-require_once locate_template('lib/sutara79-comment.php');
 
 // アドミンバーを非表示にする
 add_filter('show_admin_bar', '__return_false');

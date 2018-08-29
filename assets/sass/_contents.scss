@@ -67,27 +67,29 @@
 .sidebar {
   flex-basis: $width_side_contents;
   @include flex_item_word_wrap();
-}
-
-//
-// サイドバー内の目次
-//
-.toc_widget {
+  box-sizing: border-box;
   padding: 1rem;
   background: $color_bg_mobile_gnav;
   font-size: 0.9rem;
-
-  & .widget-title {
-    margin-bottom: 1.5rem;
-  }
 }
 
-.toc_widget_list {
+.widget {
+  margin-top: 3em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
   & li {
     margin: 0.8em 0;
   }
+}
 
-  & ul {
-    margin-left: 0.8em;
-  }
+.widget-title {
+  margin-bottom: 1em;
+}
+
+// サイドバー内の目次
+.toc_widget_list  ul {
+  margin-left: 0.8em;
 }
