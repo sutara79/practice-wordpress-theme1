@@ -78,13 +78,13 @@ $width_submenu: 240px;
       & > a {
         @include header_item();
         color: $color_txt_normal;
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
       }
       &:hover > a,
       &.current-menu-item > a,
       &.current-menu-ancestor > a {
-        border-top: 3px solid $color_txt_link;
+        border-top: 4px solid $color_txt_link;
         color: $color_txt_link;
       }
 
