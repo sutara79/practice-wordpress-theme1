@@ -23,7 +23,6 @@
 <div class="main">
     <div class="container main__contents__wrapper">
         <div class="main__contents">
-        <div class="container">
             <?php the_post(); ?>
             <?php the_content(); ?>
         </div>

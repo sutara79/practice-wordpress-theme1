@@ -45,7 +45,6 @@
                     <?php wp_nav_menu([
                         'container' => false,
                         'menu' => 'globalnavi',
-                        'depth' => 3,
                         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
                     ]); ?>
                 </nav>
@@ -59,7 +58,6 @@
                 <?php wp_nav_menu(array(
                     'container' => false,
                     'menu' => 'globalnavi',
-                    'depth' => 3,
                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
                 )); ?>
             </div>
