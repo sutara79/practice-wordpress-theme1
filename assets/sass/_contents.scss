@@ -23,6 +23,34 @@
 }
 
 //
+// 投稿ヘッダー
+//
+.post__header {
+  font-size: 0.9rem;
+  color: $color_txt_weak;
+  margin-bottom: 3em;
+}
+
+.post__date span {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.post__tags {
+  margin-top: 0.4em;
+
+  & a {
+    font-size: 0.9rem;
+    display: inline-block;
+    color: $color_txt_normal;
+    background: $color_bg_mobile_gnav;
+    border-radius: 3px;
+    padding: 0.4em;
+    margin-right: 0.5em;
+  }
+}
+
+//
 // 投稿本文
 //
 .main__contents {
