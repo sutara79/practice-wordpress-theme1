@@ -1,0 +1,14 @@
+//
+// フッター (モバイル向け)
+//
+@media screen and (max-width: $mobile_max) {
+  .site-map__inner {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: $mobile_gnav_single_max) {
+  .site-map__inner {
+    column-count: 1;
+  }
+}

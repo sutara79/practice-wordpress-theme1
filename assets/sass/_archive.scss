@@ -1,0 +1,23 @@
+//
+// アーカイブ
+//
+$archive_border: 1px solid #aaa;
+
+.archive {
+  list-style: none;
+  border-top: $archive_border;
+}
+
+.archive__post {
+  border-bottom: $archive_border;
+  padding: 1em 0;
+}
+
+.archive__post__date {
+  font-size: 0.95em;
+}
+
+.archive__post__title {
+  font-weight: 700;
+  font-size: 1.2em;
+}

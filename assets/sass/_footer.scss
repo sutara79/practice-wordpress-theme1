@@ -7,7 +7,6 @@
 
   & .menu {
     font-size: 0.85rem;
-    font-weight: 700;
 
     & > li {
       margin-bottom: 1em;
@@ -47,20 +46,8 @@
 
 .site-map__inner {
   columns: 3 auto;
-  column-gap: 3em;
+  column-gap: 2em;
   column-rule: solid #ccc 1px;
-}
-
-@media screen and (max-width: $mobile_max) {
-  .site-map__inner {
-    column-count: 2;
-  }
-}
-
-@media screen and (max-width: $mobile_gnav_single_max) {
-  .site-map__inner {
-    column-count: 1;
-  }
 }
 
 .copyright {

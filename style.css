@@ -396,7 +396,6 @@ a:hover {
 
 .site-map .menu {
   font-size: 0.85rem;
-  font-weight: 700;
 }
 
 .site-map .menu > li {
@@ -435,20 +434,8 @@ a:hover {
 
 .site-map__inner {
   columns: 3 auto;
-  column-gap: 3em;
+  column-gap: 2em;
   column-rule: solid #ccc 1px;
-}
-
-@media screen and (max-width: 1031px) {
-  .site-map__inner {
-    column-count: 2;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .site-map__inner {
-    column-count: 1;
-  }
 }
 
 .copyright {
@@ -699,6 +686,25 @@ div.wpcf7-response-output {
   border: 1px solid #bbb;
 }
 
+.archive {
+  list-style: none;
+  border-top: 1px solid #aaa;
+}
+
+.archive__post {
+  border-bottom: 1px solid #aaa;
+  padding: 1em 0;
+}
+
+.archive__post__date {
+  font-size: 0.95em;
+}
+
+.archive__post__title {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
 @media screen and (max-width: 1031px) {
   .header__main {
     box-shadow: 0 0 3px #999;
@@ -785,6 +791,18 @@ div.wpcf7-response-output {
 
 @media screen and (max-width: 1031px) and (max-width: 500px) {
   .mobile-gnav__inner {
+    column-count: 1;
+  }
+}
+
+@media screen and (max-width: 1031px) {
+  .site-map__inner {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .site-map__inner {
     column-count: 1;
   }
 }
